@@ -518,7 +518,7 @@ ul.centro-index li {
 
 .centrar{
     width: 30%;
-    height: 60%;
+    height: 50%;
 }
 
 .centrarTexto{
@@ -671,7 +671,7 @@ footer p a{
 
 
 .contacto{
-    font-size: 0.8em !important;
+    font-size: 0.8clem !important;
 }
 .alturaRecuadro{
     width: 70% !important;
