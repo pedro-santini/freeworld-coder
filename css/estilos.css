@@ -1,0 +1,592 @@
+@charset "UTF-8";
+/*Paleta de colores FREEWRLD*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+html h1 {
+  color: #ffffff;
+  font-size: 10vh;
+  text-shadow: 0 0 30px #604CC3;
+}
+html h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 4vh;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+html p {
+  font-size: 2vh !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.parrafoEjemplo {
+  color: #604CC3 !important;
+}
+
+.colorBoton {
+  background-color: #604CC3;
+  color: white;
+}
+
+.galeria, .gridContainer .galeria2, .gridContainer .galeria1 {
+  display: flex; /* Cambiar a flex */
+  justify-content: space-between; /* Espacio entre las imágenes */
+  gap: 0px;
+}
+
+.img, .gridContainer .galeria2, .gridContainer .galeria1 {
+  border-radius: 8px;
+  width: 100%; /* Mantiene el ancho dentro del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border: 1px solid #ffffff;
+}
+
+.subtituloImg, .videoGridContainer .video-back div.tituloVideo h2, .gridContainer .tituloImagen h2 {
+  color: white;
+  font-size: 3em;
+  text-shadow: 0 0 30px #FF6600;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  align-items: center;
+  background-color: #F5F5F5;
+  padding: 0px;
+  z-index: 1000;
+}
+header nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+}
+header nav div .logo {
+  font-size: 2rem;
+  color: #604CC3;
+  font-weight: bold;
+  font-family: "SUSE", sans-serif;
+  text-decoration: none;
+  background-color: #F5F5F5;
+}
+header nav div .logo:hover {
+  color: #FF6600;
+}
+header nav div .tipografiaNav ul li a {
+  text-decoration: none;
+  color: #604CC3;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+}
+header nav div .tipografiaNav ul li a:hover {
+  color: #FF6600; /* Cambia el color al pasar el mouse */
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  background-color: #F5F5F5;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  list-style-type: none;
+  justify-content: center;
+  margin: 0;
+  padding: 5px;
+}
+footer p {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  margin: 0px;
+}
+footer p a {
+  color: #000000;
+  text-decoration: none;
+  padding: 2px;
+}
+footer p a:hover {
+  color: #FF6600;
+}
+
+/* Main Index */
+.banner {
+  width: 100%;
+  height: 50vh;
+  background-image: url(../media/universo-retro.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.banner h1 {
+  color: white;
+  text-shadow: 0 0 30px #FF6600;
+}
+.banner h1:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
+.texto-home {
+  margin-top: 100px;
+  padding-bottom: 200px;
+}
+.texto-home h2 {
+  color: #000000;
+  font-size: 3em;
+}
+.texto-home p {
+  color: #000000;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+}
+.texto-home ul.centro-index {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  /* Muestra los elementos de la lista en una fila */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+}
+.texto-home ul.centro-index li.imagenConTexto {
+  margin: 10px; /* Espaciado entre las imágenes */
+  position: relative; /* Necesario para posicionar el texto sobre la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px ridge #604CC3;
+  width: 300px;
+  height: 150px;
+  align-content: center;
+  padding: 0px;
+  overflow: hidden;
+}
+.texto-home ul.centro-index li.imagenConTexto:hover {
+  border: 4px solid #FF6600;
+}
+.texto-home ul.centro-index li.imagenConTexto:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  filter: blur(2px);
+}
+.texto-home ul.centro-index li.imagenConTexto img {
+  width: 100%; /* Ajusta el tamaño de la imagen */
+  height: 100%; /* Ajusta el tamaño de la imagen */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  opacity: 0.9;
+  transition: all 0.5s ease-in-out;
+}
+.texto-home ul.centro-index li.imagenConTexto .overlay-text {
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el texto sobre la imagen */
+  color: white; /* Color del texto */
+  font-size: 1em; /* Tamaño del texto */
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  background-color: rgba(251, 119, 60, 0.8); /* Fondo semi-transparente para legibilidad */
+  border-radius: 15px;
+  padding: 10px;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+.texto-home ul.centro-index li.imagenConTexto .overlay-text:hover {
+  color: #180161;
+  background-color: white;
+}
+
+main {
+  width: 100%;
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+  align-items: center;
+  text-align: center;
+  font-family: "SUSE", sans-serif;
+  position: relative;
+  z-index: 0;
+}
+main:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../media/wallpaper2.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.1; /* Controla el nivel de opacidad */
+  z-index: -1; /* Mantiene el pseudo-elemento detrás del contenido */
+}
+
+p.contacto {
+  font-size: 2vh;
+}
+
+div form textarea.alturaRecuadro {
+  height: 30vh;
+}
+
+div div.mapResponsive {
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centra el mapa horizontalmente */
+  align-items: center; /* Centra el mapa verticalmente si es necesario */
+}
+div div.mapResponsive iframe {
+  position: absolute;
+  width: 80vw; /* Hace que el iframe ocupe todo el ancho de la ventana */
+  height: 100%;
+  border: 0;
+}
+
+.ultimaPaginaContainer {
+  width: 100%;
+  padding-bottom: 80px;
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+}
+.ultimaPaginaContainer .banner2 {
+  height: 50vh;
+  background-image: url(../media/fondo-acuarela1.jpg);
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 80px !important;
+  margin-right: 0px !important;
+  margin-top: 0px;
+}
+.ultimaPaginaContainer .banner2 h1 {
+  color: white;
+  text-shadow: 0 0 30px #FF6600;
+}
+.ultimaPaginaContainer .banner2 h1:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+.ultimaPaginaContainer div .primeraImagen {
+  height: 300px;
+  width: auto;
+}
+.ultimaPaginaContainer div .primerTexto {
+  align-content: center;
+  text-align: start;
+}
+.ultimaPaginaContainer div .segundaImagen {
+  height: 300px;
+  width: auto;
+}
+.ultimaPaginaContainer div .segundoTexto {
+  align-content: center;
+  text-align: end;
+}
+.ultimaPaginaContainer div .ultimaImagen {
+  height: 300px;
+  width: auto;
+}
+.ultimaPaginaContainer div .tercerTexto {
+  align-content: center;
+  text-align: start;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-areas: "tituloImagen tituloImagen tituloImagen tituloImagen tituloImagen" "imgContainer1 imgContainer1 imgContainer1 imgContainer1 imgContainer1" "buscador buscador buscador buscador buscador" "imgContainer2 imgContainer2 imgContainer2 imgContainer2 imgContainer2"; /* Definición de las áreas */
+  grid-template-rows: minmax(15vh, 50vh) minmax(10vh, 30vh) minmax(5vh, 15vh) minmax(10vh, 30vh); /* Altura de filas */
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  gap: 2px 0px;
+  padding: 20px;
+  padding-bottom: 300px;
+}
+.gridContainer .tituloImagen {
+  grid-area: tituloImagen; /* Coincide con el área del grid */
+  text-align: center;
+  align-content: center;
+  background-image: url(../media/bosque.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.gridContainer .tituloImagen h1 {
+  color: white;
+  font-size: 7em;
+  text-shadow: 0 0 30px #FF6600;
+}
+.gridContainer .tituloImagen h1:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+.gridContainer .galeria1 {
+  grid-area: imgContainer1; /* Asigna el área para la primera galería */
+}
+.gridContainer .formContainer {
+  grid-area: buscador; /* Coincide con el área del grid */
+  display: flex; /* Usar flex para centrar el formulario */
+  justify-content: center;
+  align-items: center;
+}
+.gridContainer .formContainer .formImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* 100% del contenedor */
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+.gridContainer .formContainer .buscadorImagenes {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #604CC3;
+  border-radius: 5px;
+  outline: none;
+}
+.gridContainer .formContainer .buscadorImagenes:hover {
+  border-color: rgba(255, 102, 0, 0.5019607843);
+}
+.gridContainer .formContainer .buscadorImagenes:focus {
+  border-color: #FF6600;
+}
+.gridContainer .galeria2 {
+  grid-area: imgContainer2; /* Asigna el área para la segunda galería */
+}
+
+.videoGridContainer {
+  justify-content: center;
+  align-content: center;
+  margin: 0px;
+}
+.videoGridContainer .video-back {
+  position: relative;
+  height: 50vh; /* Ocupa el alto completo de la ventana */
+  overflow: hidden;
+  align-content: center;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.videoGridContainer .video-back div video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+}
+.videoGridContainer .video-back div.tituloVideo {
+  position: relative;
+  z-index: 1; /* Asegura que el texto esté encima */
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.videoGridContainer .video-back div.tituloVideo h1 {
+  color: white;
+  font-size: 7em;
+  text-shadow: 0 0 30px #FF6600;
+}
+.videoGridContainer .video-back div.tituloVideo h1:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+.videoGridContainer .subtitulo {
+  padding-top: 100px !important;
+  padding-bottom: 0px !important;
+  margin-right: 0px !important;
+  justify-content: center;
+}
+.videoGridContainer .formContainer2 {
+  display: block; /* Usar flex para centrar el formulario */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.videoGridContainer .formContainer2 .formImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* 100% del contenedor */
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+.videoGridContainer .formContainer2 .formImg .buscadorImagenes {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #604CC3;
+  border-radius: 5px;
+  outline: none;
+}
+.videoGridContainer .formContainer2 .formImg .buscadorImagenes:hover {
+  border-color: rgba(255, 102, 0, 0.5019607843);
+}
+.videoGridContainer .formContainer2 .formImg .buscadorImagenes:focus {
+  border-color: #FF6600;
+}
+.videoGridContainer .carrusel {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 200px;
+}
+.videoGridContainer .carrusel .carru1 {
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  width: 80%;
+}
+.videoGridContainer .carrusel .carru1 .carousel-item {
+  border-radius: 30px;
+  overflow: hidden;
+}
+.videoGridContainer .carrusel .carru1 .carousel-item video {
+  height: 30vh;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+.videoGridContainer .carrusel button.centrar {
+  width: 30%;
+  height: 55%;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 577px) and (max-width: 1000px) {
+  .img4, .img5, .img9, .img10 {
+    display: none;
+  }
+  .gridContainer {
+    grid-template-rows: minmax(15vh, 40vh) minmax(5vh, 13vh) minmax(5vh, 15vh) minmax(15vh, 15vh);
+    padding-bottom: 25px;
+  }
+  footer {
+    align-items: center !important;
+  }
+  footer p {
+    font-size: 1.5vh !important;
+    width: 50%;
+    padding: 0px;
+    justify-content: center;
+  }
+  footer p a {
+    padding: 5px;
+  }
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 10vw !important;
+  }
+  h2 {
+    font-size: 4vw !important;
+  }
+  .banner {
+    height: 30vh;
+  }
+  .banner2 {
+    margin-right: 0px !important;
+    margin-bottom: 15px !important;
+    height: 30vh;
+    margin-top: 0px !important;
+    padding-top: 0px;
+  }
+  .marcaRegistrada {
+    display: none;
+  }
+  .img4, .img5, .img9, .img10 {
+    display: none;
+  }
+  .gridContainer {
+    grid-template-rows: minmax(15vh, 30vh) minmax(5vh, 13vh) minmax(5vh, 15vh) minmax(15vh, 15vh);
+    padding-bottom: 25px;
+  }
+  .texto-home {
+    margin-top: 25px;
+  }
+  .texto-home p {
+    margin-bottom: 5px;
+    font-size: 2vh !important;
+  }
+  .ultimaPaginaContainer div {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  .ultimaPaginaContainer {
+    padding-bottom: 15px;
+  }
+  .segundoTexto {
+    order: 2;
+    align-content: center;
+    text-align: center !important;
+  }
+  .primerTexto {
+    align-content: center;
+    text-align: center !important;
+  }
+  .tercerTexto {
+    align-content: center;
+    text-align: center !important;
+  }
+  .segundaImagen {
+    order: 1;
+  }
+  .video-back {
+    height: 30vh;
+  }
+  .subtitulo {
+    padding-top: 30px !important;
+  }
+  footer {
+    align-items: center !important;
+  }
+  footer p {
+    font-size: 1.5vh !important;
+    width: 50%;
+    padding: 0px;
+    justify-content: center;
+  }
+  footer p a {
+    padding: 5px;
+  }
+  .contacto {
+    font-size: 0.8clem !important;
+  }
+  .alturaRecuadro {
+    width: 70% !important;
+    height: 20vh !important;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

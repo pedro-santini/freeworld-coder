@@ -1,0 +1,79 @@
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+        "tituloImagen tituloImagen tituloImagen tituloImagen tituloImagen"
+        "imgContainer1 imgContainer1 imgContainer1 imgContainer1 imgContainer1"
+        "buscador buscador buscador buscador buscador"
+        "imgContainer2 imgContainer2 imgContainer2 imgContainer2 imgContainer2"; /* Definición de las áreas */
+    grid-template-rows: 
+    minmax(15vh, 50vh) 
+    minmax(10vh, 30vh)
+    minmax(5vh, 15vh)
+    minmax(10vh, 30vh); /* Altura de filas */
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 2px 0px;
+    padding: 20px;
+    padding-bottom: 300px;
+    .tituloImagen {
+        grid-area: tituloImagen; /* Coincide con el área del grid */
+        text-align: center;
+        align-content: center;
+        background-image: url(../media/bosque.jpg);
+        background-size: cover;
+        background-position: center;
+        text-align: center; 
+        margin-bottom: 15px;
+        border-radius: 4px;
+        h1{
+            color: white;
+            font-size: 7em;
+            text-shadow:0 0 30px $naranja;
+            &:hover{
+                transform: scale(1.2);
+                transition-duration: 1s;
+            }
+        }
+        h2{
+        @extend .subtituloImg;
+        }
+    }
+    .galeria1{
+        grid-area: imgContainer1; /* Asigna el área para la primera galería */
+        @extend .galeria;
+        @extend .img;
+    }
+    .formContainer{
+        grid-area: buscador; /* Coincide con el área del grid */
+        display: flex; /* Usar flex para centrar el formulario */
+        justify-content: center;
+        align-items: center;
+        .formImg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* 100% del contenedor */
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 0px;
+        }
+        .buscadorImagenes {
+            width: 60%;
+            padding: 10px;
+            border: 2px solid $violeta;
+            border-radius: 5px;
+            outline: none;
+            &:hover{
+                border-color: #FF660080;
+            }
+            &:focus{
+                border-color: $naranja;
+            }
+        }
+    }
+    .galeria2{
+        grid-area: imgContainer2; /* Asigna el área para la segunda galería */
+        @extend .galeria;
+        @extend .img;
+    }
+}

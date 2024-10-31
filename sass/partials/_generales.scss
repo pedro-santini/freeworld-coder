@@ -26,3 +26,66 @@ p{
     margin-left: 10px;
     margin-right: 10px;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+
+    h1{
+        color: #ffffff;
+        font-size: 10vh;
+        text-shadow:0 0 30px $violeta;
+    }
+
+    h2 {
+        font-family: "Nunito", sans-serif;
+        font-size: 4vh;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    p{
+        font-size: 2vh !important;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+//MODAL BOOTSTRAP
+
+.parrafoEjemplo{
+    color: $violeta !important;
+}
+.colorBoton{
+    background-color: $violeta;
+    color: white;
+}
+
+
+//IMAGENES
+
+.galeria{
+    display: flex; /* Cambiar a flex */
+    justify-content: space-between; /* Espacio entre las imágenes */
+    gap: 0px;
+}
+.img{
+    border-radius: 8px;
+    width: 100%; /* Mantiene el ancho dentro del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border: 1px solid#ffffff;
+}
+
+//IMG, VIDEOS y MUSICA
+
+.subtituloImg{
+    color: white;
+    font-size: 3em;
+    text-shadow:0 0 30px $naranja;
+}

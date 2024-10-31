@@ -1,11 +1,17 @@
-
-//primero variables y datos generales
+//Variables va primero porque compila en cascada
 @import "./partials/variables";
+
 @import "./partials/generales";
-
-
-//luego el resto de partials
-@import "./partials/index";
 @import "./partials/header-footer";
+@import "./partials/index";
+@import "./partials/main";
+@import "./partials/contacto";
+@import "./partials/sobre-nosotros";
+@import "./partials/imagenes";
+@import "./partials/videos";
 
 
+//Media queries tiene que ir último para que nada lo pise
+@import "./partials/media-queries";
+
+//----------------------------------------------------------------------------------------------------
