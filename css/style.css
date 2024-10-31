@@ -74,9 +74,9 @@ header {
     background-color: #F5F5F5;
 }
 
-.container-fluid{
+/* .container-fluid{
     width: 100%;
-}
+} */
 /* Contenedor de navegación, links a la derecha del header */
 nav {
     display: flex;
@@ -193,6 +193,10 @@ main{
     padding-left: 20px;
 }
 
+.texto-home {
+    margin-top: 100px;
+    padding-bottom: 200px;
+}
 
 .texto-home h2{
     color: #000000;
@@ -205,10 +209,7 @@ main{
     margin-bottom: 50px;
 }
 
-.texto-home {
-    margin-top: 100px;
-    padding-bottom: 200px;
-}
+
 /* Estilo para la imagen del banner */
 
 ul.centro-index {
@@ -451,19 +452,25 @@ ul.centro-index li {
 
 /*VIDEOS*/
 
+.videoGridContainer{
+    justify-content: center;
+    align-content: center;
+    margin: 0px;
+}
 .video-back{
     position: relative;
-    height:50vh; /* Ocupa el alto completo de la ventana */
-    width: 100%;
+    height: 50vh; /* Ocupa el alto completo de la ventana */
+    width: 100vw !important;
     overflow: hidden;
-    grid-area: tituloImagen; /* Coincide con el área del grid */
     align-content: center;
+    margin-right: 0px;
+    margin-left: 0px !important;
 }
 .video-back video{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    width: 100vw !important;
     height: 100%;
     transform: translate(-50%, -50%);
     z-index: 0;
@@ -484,13 +491,13 @@ ul.centro-index li {
 .tituloVideo h1{
     color: white;
     font-size: 7em;
-    text-shadow:0 0 30px #Ff6600
+    text-shadow:0 0 30px #Ff6600;
 }
 
 .tituloVideo h2{
     color: white;
     font-size: 3em;
-    text-shadow:0 0 30px #Ff6600
+    text-shadow:0 0 30px #Ff6600;
 }
 
 

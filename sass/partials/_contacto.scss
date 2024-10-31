@@ -1,0 +1,29 @@
+
+p.contacto{
+    font-size: 2vh;
+}
+
+div{
+    form{
+        textarea.alturaRecuadro{
+            height: 30vh;
+        }
+    }
+}
+
+div{
+    div.mapResponsive{
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centra el mapa horizontalmente */
+    align-items: center; /* Centra el mapa verticalmente si es necesario */
+        iframe{
+            position: absolute;
+            width: 80vw; /* Hace que el iframe ocupe todo el ancho de la ventana */
+            height: 100%;
+            border: 0;
+        }
+    }
+}

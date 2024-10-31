@@ -1,0 +1,12 @@
+/*Paleta de colores FREEWRLD*/
+$naranja:#FF6600;
+$violeta:#604CC3;
+$gris:#F5F5F5;
+
+@mixin textoSobreNosotros ($var1, $var2){
+    align-content:$var1;
+    text-align:$var2;
+}
+
+
+

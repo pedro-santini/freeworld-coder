@@ -1,0 +1,139 @@
+/* MEDIA QUERIES */
+
+@media (min-width:577px) and (max-width:1000px) {
+    .img4, .img5, .img9, .img10{
+        display: none;
+    }
+    .gridContainer{
+        grid-template-rows: 
+        minmax(15vh, 40vh) 
+        minmax(5vh, 13vh)
+        minmax(5vh, 15vh)
+        minmax(15vh, 15vh);
+        padding-bottom: 25px;
+    }
+    footer{
+        align-items: center !important;
+    }
+    footer p{
+        font-size: 1.5vh !important;
+        width: 50%;
+        padding: 0px;
+        justify-content: center;
+    }
+    footer p a{
+        padding: 5px;
+    }
+}
+
+@media (max-width: 576px){
+
+    h1{
+        font-size: 10vw !important;
+    }
+    
+    h2{
+        font-size: 4vw !important;
+    }
+    
+    .banner{
+        height: 30vh;
+    }
+    
+    .banner2{
+        margin-right: 0px !important;
+        margin-bottom: 15px !important;
+        height: 30vh;
+        margin-top: 0px !important;
+        padding-top: 0px;
+    }
+    
+    
+    .marcaRegistrada{
+        display: none;
+    }
+    
+    .img4, .img5, .img9, .img10{
+        display: none;
+    }
+    
+    .gridContainer{
+        grid-template-rows: 
+        minmax(15vh, 30vh) 
+        minmax(5vh, 13vh)
+        minmax(5vh, 15vh)
+        minmax(15vh, 15vh);
+        padding-bottom: 25px;
+    }
+    
+    .texto-home{
+        margin-top: 25px;
+    }
+    .texto-home p{
+        margin-bottom: 5px;
+        font-size: 2vh !important;
+    }
+    
+    .ultimaPaginaContainer div{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    
+    .ultimaPaginaContainer{
+        padding-bottom: 15px;
+    }
+    .segundoTexto{
+        order:2;
+        align-content: center;
+        text-align: center !important;
+    }
+
+    .primerTexto{
+        align-content: center;
+        text-align: center !important;
+    }
+    .tercerTexto{
+        align-content: center;
+        text-align: center !important;
+    }
+    .segundaImagen{
+        order: 1;
+    
+    }
+    
+    .video-back{
+        height: 30vh;
+    }
+    
+    .subtitulo{
+        padding-top: 30px !important;
+    }
+    
+    footer{
+        align-items: center !important;
+    }
+    
+    footer p{
+        font-size: 1.5vh !important;
+        width: 50%;
+        padding: 0px;
+        justify-content: center;
+    }
+    
+    footer p a{
+        padding: 5px;
+    }
+    
+    
+    .contacto{
+        font-size: 0.8clem !important;
+    }
+    .alturaRecuadro{
+        width: 70% !important;
+        height: 20vh !important;
+    
+    }
+    }
+    

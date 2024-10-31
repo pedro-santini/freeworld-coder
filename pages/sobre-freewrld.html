@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,8 +13,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <title>Sobre FreeWRLD</title>
+
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
@@ -52,26 +56,26 @@
             <h1 class="col-12 col-md-12 col-lg-12">SOBRE FREEWRLD</h1>
             <!-- Para imagenes y palabras clave sobre la imagen -->
         </div>
-        <div class="row ms-4 me-4 pt-5 mb-5">
-            <img src="../media/sobre_nosotros.jpg" alt="imagenIzquierda" class="col-12 col-md-6 col-lg-6 rounded-4">
+        <div class="row ms-4 me-4 pt-5 mb-5" data-aos="flip-up">
+            <img src="../media/sobre_nosotros.jpg" alt="imagenIzquierda" class="col-12 col-md-6 col-lg-6 rounded-4 primeraImagen">
             <div class="col-12 col-md-6 col-lg-6 primerTexto">
-                <h2>Subtitulo sobre nosotros</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum debitis cumque praesentium modi nemo pariatur nam ad dolorem vero et veritatis, adipisci ratione, nulla provident voluptate. Voluptate culpa dicta ullam?</p>
+                <h2>El origen de una idea revolucionaria</h2>
+                <p>Nuestra empresa nació de la pasión por explorar los límites de la creatividad y la tecnología. Desde el primer momento, imaginamos una plataforma donde cualquiera pudiera crear arte y contenido visual, musical y audiovisual solo con su imaginación, utilizando la inteligencia artificial como herramienta central. La idea surgió en conversaciones entre amigos, todos fanáticos de las artes digitales y la tecnología, quienes notaron una creciente demanda de herramientas accesibles para crear de manera rápida y personalizable.</p>
             </div>
         </div>
-        <div class="row ms-4 me-4 mb-5">
+        <div class="row ms-4 me-4 mb-5" data-aos="flip-up">
             <div class="col-12 col-md-6 col-lg-6 segundoTexto" >
-                <h2>Subtitulo sobre nosotros</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum debitis cumque praesentium modi nemo pariatur nam ad dolorem vero et veritatis, adipisci ratione, nulla provident voluptate. Voluptate culpa dicta ullam?</p>
+                <h2>El reto de construir nuestra primera web</h2>
+                <p>Construir nuestra primera web fue un gran desafío, pero también una experiencia de aprendizaje invaluable. Desde el diseño de la interfaz hasta el ajuste de los algoritmos de generación de contenido, cada paso fue una prueba de creatividad y paciencia. La inspiración vino de plataformas similares, pero siempre quisimos destacar por la simplicidad y el enfoque en la personalización del usuario. Al principio, no teníamos el financiamiento ni el equipo de desarrollo completo, así que cada integrante puso lo mejor de sí para lanzar nuestra primera versión, que rápidamente captó la atención de los usuarios.</p>
             </div>
             <img src="../media/imagenDerecha.webp" alt="imagenDerecha" class="col-12 col-md-6 col-lg-6 rounded-4 segundaImagen">
         </div>
 
-        <div class="row ms-4 me-4 mb-5">
-            <img src="../media/imagenIzquierda2.jpg" alt="imagenIzquierda2" class="col-12 col-md-6 col-lg-6 rounded-4 ultimaImagen" >
+        <div class="row ms-4 me-4 mb-5" data-aos="flip-up">
+            <img src="../media/imagenIzquierda2.jpg" alt="imagenIzquierda2" class="col-12 col-md-6 col-lg-6 rounded-4 ultimaImagen">
             <div class="col-12 col-md-6 col-lg-6 tercerTexto" >
-                <h2>Subtitulo sobre nosotros</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum debitis cumque praesentium modi nemo pariatur nam ad dolorem vero et veritatis, adipisci ratione, nulla provident voluptate. Voluptate culpa dicta ullam?</p>
+                <h2>Superando obstáculos y evolucionando juntos</h2>
+                <p>Durante este viaje, nos encontramos con muchas dificultades, desde temas técnicos hasta decisiones de diseño y usabilidad. Pero estos obstáculos solo nos hicieron más fuertes y nos permitieron mejorar constantemente. Gracias al feedback de una comunidad activa y creativa, logramos pulir la plataforma y hacerla más accesible y potente. Hoy, estamos orgullosos de ver cómo nuestra IA ayuda a artistas, músicos y creadores de todo tipo a transformar sus ideas en realidad.</p>
             </div>
             
         </div>
@@ -150,6 +154,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
