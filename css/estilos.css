@@ -11,12 +11,18 @@ html {
 }
 html h1 {
   color: #ffffff;
-  font-size: 10vh;
+  font-size: 6vw;
   text-shadow: 0 0 30px #604CC3;
 }
 html h2 {
   font-family: "Nunito", sans-serif;
-  font-size: 4vh;
+  font-size: 3.5vw;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+html h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 3vw;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -50,7 +56,7 @@ html p {
   border: 1px solid #ffffff;
 }
 
-.subtituloImg, .videoGridContainer .video-back div.tituloVideo h2 {
+.subtituloImg {
   color: white;
   font-size: 3em;
   text-shadow: 0 0 30px #FF6600;
@@ -385,7 +391,6 @@ div div.mapResponsive iframe {
 }
 .imagenesGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
-  font-size: 7em;
   text-shadow: 0 0 30px #FF6600;
 }
 .imagenesGridContainer .bannerPaginas .tituloBanner h1:hover {
@@ -393,7 +398,6 @@ div div.mapResponsive iframe {
   transition-duration: 1s;
 }
 .imagenesGridContainer .bannerPaginas .tituloBanner h2 {
-  font-size: 3em;
   color: white;
   text-shadow: 0 0 15px #FF6600;
 }
@@ -459,42 +463,51 @@ div div.mapResponsive iframe {
   align-content: center;
   margin: 0px;
 }
-.videoGridContainer .video-back {
+.videoGridContainer .bannerPaginas {
   position: relative;
-  height: 50vh; /* Ocupa el alto completo de la ventana */
+  width: 100%;
+  height: 50vh;
   overflow: hidden;
-  align-content: center;
-  margin-right: 0px;
-  margin-left: 0px;
-}
-.videoGridContainer .video-back div video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  object-fit: cover;
-  object-position: center;
-}
-.videoGridContainer .video-back div.tituloVideo {
-  position: relative;
-  z-index: 1; /* Asegura que el texto esté encima */
-  align-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.videoGridContainer .bannerPaginas .bannerVideo {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.videoGridContainer .bannerPaginas .bannerVideo video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.videoGridContainer .bannerPaginas .tituloBanner {
+  position: relative;
+  z-index: 2;
   text-align: center;
   margin-bottom: 15px;
-  border-radius: 4px;
 }
-.videoGridContainer .video-back div.tituloVideo h1 {
+.videoGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
-  font-size: 7em;
   text-shadow: 0 0 30px #FF6600;
 }
-.videoGridContainer .video-back div.tituloVideo h1:hover {
+.videoGridContainer .bannerPaginas .tituloBanner h1:hover {
   transform: scale(1.2);
   transition-duration: 1s;
+}
+.videoGridContainer .bannerPaginas .tituloBanner h2 {
+  color: white;
+  text-shadow: 0 0 15px #FF6600;
 }
 .videoGridContainer .carrusel {
   margin-top: 30px;
@@ -551,7 +564,6 @@ div div.mapResponsive iframe {
 }
 .musicaGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
-  font-size: 7em;
   text-shadow: 0 0 30px #FF6600;
 }
 .musicaGridContainer .bannerPaginas .tituloBanner h1:hover {
@@ -559,7 +571,6 @@ div div.mapResponsive iframe {
   transition-duration: 1s;
 }
 .musicaGridContainer .bannerPaginas .tituloBanner h2 {
-  font-size: 3em;
   color: white;
   text-shadow: 0 0 15px #FF6600;
 }
@@ -587,11 +598,8 @@ div div.mapResponsive iframe {
   }
 }
 @media (max-width: 576px) {
-  h1 {
-    font-size: 10vw !important;
-  }
-  h2 {
-    font-size: 4vw !important;
+  html h2 {
+    font-size: 3vw;
   }
   .banner {
     height: 30vh;
