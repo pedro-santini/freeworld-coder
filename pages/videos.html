@@ -17,7 +17,6 @@
 
     <title>Videos</title>
 
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <link rel="stylesheet" href="../css/estilos.css">
 
 </head>
@@ -31,20 +30,20 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse nav tipografiaNav" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">Registrate</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./contacto.html" class="nav-link">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./sobre-freewrld.html" class="nav-link">Sobre FreeWRLD</a>
-                </li>
-                </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">Registrate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contacto.html" class="nav-link">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./sobre-freewrld.html" class="nav-link">Sobre FreeWRLD</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -52,39 +51,32 @@
 
     <main class="main">
         <section class="videoGridContainer">
-            <div class="row video-back w-100">
-                <div class="col-12">
+            <div class="bannerPaginas">
+                <div class="w-100 bannerVideo">
                     <video autoplay muted loop class="w-100">
                     <source src="../media/inteligenciaVideo.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de videos.
                     </video>
-
-                    <div class="tituloVideo">
-                    <h1>VIDEOS</h1>
-                    <h2 class="subtituloVid">Crea videos únicos con tus prompts</h2>
+                    <div class="tituloBanner">
+                        <h1>VIDEOS</h1>
+                        <h2 class="subtituloVid">Crea videos únicos con tus prompts</h2>
                     </div>
                 </div>
             </div>
 
-            <div class="row subtitulo pt-5 text-center mx-auto p-5">
-                <div class="col-11">
-                    <h2 class="subtituloImg mb-5">Expresa tu visión, crea videos a tu estilo</h2>
+            <div class="subtitulo pt-5 text-center mx-auto p-5">
+                    <h3 class="mb-5">Expresa tu visión, crea videos a tu estilo</h3>
                     <p class="parrafoSubtitulo">Escribe un prompt claro y específico que incluya el tema, el estilo y la duración deseada del video. Por ejemplo, puedes describir la acción que quieres que se represente, el ambiente y cualquier detalle visual que consideres importante. Cuanto más detallado seas, más alineado estará el resultado con tu visión.</p>
-                </div>
             </div>
 
-            <div class="row formContainer2">
-                <div class="col-12">
+            <div class="formContainer">
                     <form action="./videos.html" method="get" class="formImg">
                         <input type="text" id="text" class="buscadorImagenes" placeholder="Escribir prompt...">
                         <input type="submit" value="🔎" class="p-3">
                     </form>
-                </div>
+                    <p class="parrafoEjemplo me-3 text-center p-5"> <em>Ejemplo de prompt: "Un video de 30 segundos que muestre un amanecer en la playa, con olas suaves y una música relajante de fondo."</em>.</p>
             </div>
-            <div class="row me-3 text-center p-5">
-                    <p class="parrafoEjemplo col-12"> <em>Ejemplo de prompt: "Un video de 30 segundos que muestre un amanecer en la playa, con olas suaves y una música relajante de fondo."</em>.</p>
-            </div>
-            <div id="carouselExampleAutoplaying" class="carousel slide row carrusel" data-bs-ride="carousel">
+            <div id="carouselExampleAutoplaying" class="carousel slide carrusel" data-bs-ride="carousel">
                 <div class="carousel-inner carru1">
                     <div class="carousel-item active">
                         <video autoplay muted loop src="../media/aguaVideo.mp4" class="d-block w-100"></video>
