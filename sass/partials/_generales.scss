@@ -70,8 +70,9 @@ html{
 }
 
 .formContainer{
-    display: block; /* Usar flex para centrar el formulario */
-    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Usar flex para centrar el formulario */
+    justify-content: center; 
     align-items: center;
     text-align: center;
     width:100%;

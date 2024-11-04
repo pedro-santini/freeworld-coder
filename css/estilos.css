@@ -35,14 +35,14 @@ html p {
   color: white;
 }
 
-.galeria, .gridContainer .galeria2, .gridContainer .galeria1 {
+.galeria, .imagenesGridContainer .galeria2, .imagenesGridContainer .galeria1 {
   display: flex; /* Cambiar a flex */
   justify-content: center; /* Espacio entre las imágenes */
   align-items: center;
   gap: 0px;
 }
 
-.img, .gridContainer .galeria2, .gridContainer .galeria1 {
+.img, .imagenesGridContainer .galeria2, .imagenesGridContainer .galeria1 {
   border-radius: 8px;
   width: 20vw; /* Mantiene el ancho dentro del contenedor */
   height: 20vw; /* Mantiene la proporción de la imagen */
@@ -64,7 +64,8 @@ html p {
 }
 
 .formContainer {
-  display: block; /* Usar flex para centrar el formulario */
+  display: flex;
+  flex-direction: column; /* Usar flex para centrar el formulario */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -351,12 +352,12 @@ div div.mapResponsive iframe {
   text-align: start;
 }
 
-.gridContainer {
+.imagenesGridContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.gridContainer .bannerPaginas {
+.imagenesGridContainer .bannerPaginas {
   position: relative;
   width: 100%;
   height: 50vh;
@@ -366,7 +367,7 @@ div div.mapResponsive iframe {
   justify-content: center;
   text-align: center;
 }
-.gridContainer .bannerPaginas img {
+.imagenesGridContainer .bannerPaginas img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -376,33 +377,83 @@ div div.mapResponsive iframe {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-.gridContainer .bannerPaginas .tituloBanner {
+.imagenesGridContainer .bannerPaginas .tituloBanner {
   position: relative;
   z-index: 2;
   text-align: center;
   margin-bottom: 15px;
 }
-.gridContainer .bannerPaginas .tituloBanner h1 {
+.imagenesGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
   font-size: 7em;
   text-shadow: 0 0 30px #FF6600;
 }
-.gridContainer .bannerPaginas .tituloBanner h1:hover {
+.imagenesGridContainer .bannerPaginas .tituloBanner h1:hover {
   transform: scale(1.2);
   transition-duration: 1s;
 }
-.gridContainer .bannerPaginas .tituloBanner h2 {
+.imagenesGridContainer .bannerPaginas .tituloBanner h2 {
   font-size: 3em;
   color: white;
   text-shadow: 0 0 15px #FF6600;
 }
-.gridContainer .galeria1 {
+.imagenesGridContainer .galeria1 {
   width: 80%;
 }
-.gridContainer .galeria2 {
+.imagenesGridContainer .galeria2 {
   width: 80%;
 }
 
+.slide-right {
+  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200px);
+    transform: translateX(-200px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-200px);
+    transform: translateX(-200px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+.slide-left {
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
 .videoGridContainer {
   justify-content: center;
   align-content: center;
@@ -444,35 +495,6 @@ div div.mapResponsive iframe {
 .videoGridContainer .video-back div.tituloVideo h1:hover {
   transform: scale(1.2);
   transition-duration: 1s;
-}
-.videoGridContainer .formContainer2 {
-  display: block; /* Usar flex para centrar el formulario */
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.videoGridContainer .formContainer2 .formImg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* 100% del contenedor */
-  width: 100%;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 0px;
-}
-.videoGridContainer .formContainer2 .formImg .buscadorImagenes {
-  width: 60%;
-  padding: 10px;
-  border: 2px solid #604CC3;
-  border-radius: 5px;
-  outline: none;
-}
-.videoGridContainer .formContainer2 .formImg .buscadorImagenes:hover {
-  border-color: rgba(255, 102, 0, 0.5019607843);
-}
-.videoGridContainer .formContainer2 .formImg .buscadorImagenes:focus {
-  border-color: #FF6600;
 }
 .videoGridContainer .carrusel {
   margin-top: 30px;

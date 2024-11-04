@@ -42,36 +42,6 @@
             }
         }
     }
-    
-    .formContainer2{
-        display: block; /* Usar flex para centrar el formulario */
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        .formImg{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%; /* 100% del contenedor */
-            width: 100%;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 0px;
-            .buscadorImagenes{
-                width: 60%;
-                padding: 10px;
-                border: 2px solid $violeta;
-                border-radius: 5px;
-                outline: none;
-                &:hover{
-                    border-color: #FF660080;
-                }
-                &:focus{
-                    border-color: $naranja;
-                }
-            }
-        }
-    }
     .carrusel{
         margin-top: 30px;
         display: flex;
