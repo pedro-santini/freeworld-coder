@@ -101,8 +101,26 @@ html p {
   border-color: #FF6600;
 }
 
+.texto-nav-link, header .sub-header .nav-link, header nav div .tipografiaNav ul li a {
+  text-decoration: none;
+  color: #604CC3;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+}
+.texto-nav-link:hover, header .sub-header .nav-link:hover, header nav div .tipografiaNav ul li a:hover {
+  color: #FF6600;
+  font-weight: bold;
+}
+.texto-nav-link.active, header .sub-header .active.nav-link, header nav div .tipografiaNav ul li a.active {
+  color: #FF6600;
+  font-weight: bold;
+  font-style: italic;
+  pointer-events: none;
+}
+
 header {
   display: flex;
+  flex-direction: column;
   position: sticky;
   top: 0px;
   left: 0px;
@@ -138,15 +156,34 @@ header nav div .logo {
 header nav div .logo:hover {
   color: #FF6600;
 }
-header nav div .tipografiaNav ul li a {
-  text-decoration: none;
-  color: #604CC3;
-  font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
+header .sub-header {
+  width: 100%;
+  align-items: center;
+  display: block;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  background-color: #f8f9fa;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background-color: #efc0f1;
+  z-index: 999;
 }
-header nav div .tipografiaNav ul li a:hover {
-  color: #FF6600; /* Cambia el color al pasar el mouse */
+header .sub-header .nav-link {
+  color: white;
+  font-size: 1em;
   font-weight: bold;
+}
+header .sub-header .sub-color {
+  background-color: rgba(197, 44, 205, 0.1);
+}
+
+header:hover .sub-header {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 footer {
