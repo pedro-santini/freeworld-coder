@@ -322,6 +322,7 @@ div div.mapResponsive iframe {
   padding-bottom: 80px;
   margin-right: 0px !important;
   padding-right: 0px !important;
+  justify-content: center;
 }
 .ultimaPaginaContainer .banner2 {
   height: 50vh;
@@ -343,12 +344,15 @@ div div.mapResponsive iframe {
   transition-duration: 1s;
 }
 .ultimaPaginaContainer div .primeraImagen {
-  height: 300px;
+  height: 250px;
   width: auto;
 }
 .ultimaPaginaContainer div .primerTexto {
   align-content: center;
   text-align: start;
+}
+.ultimaPaginaContainer div .primerTexto h2 {
+  font-size: 3rem;
 }
 .ultimaPaginaContainer div .segundaImagen {
   height: 300px;
@@ -358,6 +362,9 @@ div div.mapResponsive iframe {
   align-content: center;
   text-align: end;
 }
+.ultimaPaginaContainer div .segundoTexto h2 {
+  font-size: 3rem;
+}
 .ultimaPaginaContainer div .ultimaImagen {
   height: 300px;
   width: auto;
@@ -365,6 +372,9 @@ div div.mapResponsive iframe {
 .ultimaPaginaContainer div .tercerTexto {
   align-content: center;
   text-align: start;
+}
+.ultimaPaginaContainer div .tercerTexto h2 {
+  font-size: 3rem;
 }
 
 .imagenesGridContainer {
@@ -586,12 +596,22 @@ div div.mapResponsive iframe {
 
 /* MEDIA QUERIES */
 @media (min-width: 577px) and (max-width: 1000px) {
+  html, body {
+    overflow-x: hidden;
+  }
   .img4, .img5, .img9, .img10 {
     display: none;
   }
   .gridContainer {
     grid-template-rows: minmax(15vh, 40vh) minmax(5vh, 13vh) minmax(5vh, 15vh) minmax(15vh, 15vh);
     padding-bottom: 25px;
+  }
+  .ultimaPaginaContainer div {
+    width: 100%;
+  }
+  .ultimaPaginaContainer div .primeraImagen, .ultimaPaginaContainer div .segundaImagen, .ultimaPaginaContainer div .ultimaImagen {
+    width: 99%;
+    height: auto;
   }
   footer {
     align-items: center !important;

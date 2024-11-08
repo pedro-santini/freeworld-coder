@@ -4,6 +4,7 @@
     padding-bottom: 80px;
     margin-right: 0px !important;
     padding-right: 0px !important;
+    justify-content: center;
     .banner2{
         height: 50vh;
         background-image: url(../media/fondo-acuarela1.jpg);
@@ -26,11 +27,14 @@
 
     div{
         .primeraImagen{
-            height: 300px;
+            height: 250px;
             width:auto;
         }
         .primerTexto{
         @include textoSobreNosotros (center,start);
+        h2{
+            font-size: 3rem;
+        }
         }
     }
     div{
@@ -40,6 +44,9 @@
         }
         .segundoTexto{
         @include textoSobreNosotros (center,end);
+        h2{
+            font-size: 3rem;
+        }
         }
     }
 
@@ -50,6 +57,9 @@
         }
         .tercerTexto{
         @include textoSobreNosotros (center,start);
+        h2{
+            font-size: 3rem;
+        }
         }
     }
 }

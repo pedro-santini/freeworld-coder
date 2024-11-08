@@ -1,7 +1,9 @@
 /* MEDIA QUERIES */
 
 @media (min-width:577px) and (max-width:1000px) {
-
+    html, body {
+        overflow-x: hidden;
+    }
 html{
     // h1{
     //     font-size: 9vw;
@@ -21,6 +23,18 @@ html{
         minmax(5vh, 15vh)
         minmax(15vh, 15vh);
         padding-bottom: 25px;
+    }
+    .ultimaPaginaContainer{
+
+        
+        div{
+            .primeraImagen, .segundaImagen, .ultimaImagen{
+                width: 99%;
+                height: auto;
+            }
+            width: 100%;
+
+        }
     }
     footer{
         align-items: center !important;
