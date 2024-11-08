@@ -118,6 +118,15 @@ header nav {
   padding: 0;
   background-color: #F5F5F5;
 }
+header nav div .logoInfinito {
+  height: auto;
+  width: 3rem;
+  margin-right: 3px;
+}
+header nav div .logoInfinito:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
 header nav div .logo {
   font-size: 2rem;
   color: #604CC3;
@@ -600,6 +609,9 @@ div div.mapResponsive iframe {
 @media (max-width: 576px) {
   html h2 {
     font-size: 3vw;
+  }
+  header nav div a span {
+    display: none;
   }
   .banner {
     height: 30vh;

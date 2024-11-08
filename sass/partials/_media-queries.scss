@@ -46,6 +46,17 @@ html{
     font-size: 3vw;
     }
 }
+header{
+    nav{
+        div{
+            a{
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+}
     .banner{
         height: 30vh;
     }
