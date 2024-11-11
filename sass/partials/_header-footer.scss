@@ -1,11 +1,30 @@
+.texto-nav-link {
+    text-decoration: none;
+    color: $violeta;
+    font-size: 1.2rem;
+    font-family: "Nunito", sans-serif;
+
+    &:hover {
+        color: $naranja;
+        font-weight: bold;
+    }
+    &.active {
+        color: $naranja;  // Color para destacar la página actual
+        font-weight: bold;
+        font-style: italic;  // Puedes añadir un subrayado o algún estilo distintivo
+        pointer-events: none;  // Desactiva el hover y hace que no sea clickeable
+    }
+}
+
 header{
     display: flex;  
+    flex-direction: column;
     position: sticky;
     top: 0px;
     left: 0px;
     width: 100%;
     align-items: center;
-    background-color: #F5F5F5;
+    background-color: $gris;
     padding: 0px;
     z-index: 1000;
 
@@ -16,6 +35,15 @@ header{
         background-color: $gris;
 
         div{
+            .logoInfinito{
+                height: auto;
+                width: 3rem;
+                margin-right: 3px;
+                &:hover{
+                    transform: scale(1.2);
+                    transition-duration: 0.5s;
+                }
+            }
             .logo{
                     font-size: 2rem;
                     color: $violeta;
@@ -29,21 +57,45 @@ header{
                 
             }
             .tipografiaNav ul li a {
-                text-decoration: none;
-                color: $violeta;
-                font-size: 1.2rem;
-                font-family: "Nunito", sans-serif;
-                &:hover {
-                    color: $naranja; /* Cambia el color al pasar el mouse */
-                    font-weight: bold;
-                }
+                @extend .texto-nav-link;
             }
         }
     }
+    .sub-header {
+        width: 100%;
+        align-items: center;
+        display: block;  // Oculto inicialmente
+        position: fixed;   // Cambio a fixed
+        top: 40px;         // Ajusta este valor según la altura de tu primer nav
+        left: 0;
+        background-color: #f8f9fa;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: -1;
+        border-radius: 3px;
+
+        .nav-link{
+        @extend .texto-nav-link;
+        color:white;
+        font-size: 1em;
+        font-weight: bold;
+        }
+         // Muestra y despliega el sub-header cuando el usuario pasa cerca del header
+        .sub-color{
+            background-color: #715ec3;
+            border-radius: 3px;
+        }
+        
+    }
     
 }
-
-
+header:hover .sub-header {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);  // Despliegue hacia abajo
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
 footer{
     display: flex;

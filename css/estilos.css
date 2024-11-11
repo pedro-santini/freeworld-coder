@@ -130,8 +130,26 @@ html p {
   border-color: #FF6600;
 }
 
+.texto-nav-link, header .sub-header .nav-link, header nav div .tipografiaNav ul li a {
+  text-decoration: none;
+  color: #604CC3;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+}
+.texto-nav-link:hover, header .sub-header .nav-link:hover, header nav div .tipografiaNav ul li a:hover {
+  color: #FF6600;
+  font-weight: bold;
+}
+.texto-nav-link.active, header .sub-header .active.nav-link, header nav div .tipografiaNav ul li a.active {
+  color: #FF6600;
+  font-weight: bold;
+  font-style: italic;
+  pointer-events: none;
+}
+
 header {
   display: flex;
+  flex-direction: column;
   position: sticky;
   top: 0px;
   left: 0px;
@@ -147,6 +165,15 @@ header nav {
   padding: 0;
   background-color: #F5F5F5;
 }
+header nav div .logoInfinito {
+  height: auto;
+  width: 3rem;
+  margin-right: 3px;
+}
+header nav div .logoInfinito:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
 header nav div .logo {
   font-size: 2rem;
   color: #604CC3;
@@ -158,15 +185,35 @@ header nav div .logo {
 header nav div .logo:hover {
   color: #FF6600;
 }
-header nav div .tipografiaNav ul li a {
-  text-decoration: none;
-  color: #604CC3;
-  font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
+header .sub-header {
+  width: 100%;
+  align-items: center;
+  display: block;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  background-color: #f8f9fa;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: -1;
+  border-radius: 3px;
 }
-header nav div .tipografiaNav ul li a:hover {
-  color: #FF6600; /* Cambia el color al pasar el mouse */
+header .sub-header .nav-link {
+  color: white;
+  font-size: 1em;
   font-weight: bold;
+}
+header .sub-header .sub-color {
+  background-color: #715ec3;
+  border-radius: 3px;
+}
+
+header:hover .sub-header {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 footer {
@@ -340,8 +387,10 @@ div div.mapResponsive iframe {
 .ultimaPaginaContainer {
   width: 100%;
   padding-bottom: 80px;
-  margin-right: 0px !important;
-  padding-right: 0px !important;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  justify-content: center;
 }
 .ultimaPaginaContainer .banner2 {
   height: 50vh;
@@ -351,8 +400,9 @@ div div.mapResponsive iframe {
   align-items: center;
   text-align: center;
   margin-bottom: 80px !important;
-  margin-right: 0px !important;
+  margin: 0 auto;
   margin-top: 0px;
+  overflow-x: hidden;
 }
 .ultimaPaginaContainer .banner2 h1 {
   color: white;
@@ -363,12 +413,15 @@ div div.mapResponsive iframe {
   transition-duration: 1s;
 }
 .ultimaPaginaContainer div .primeraImagen {
-  height: 300px;
+  height: 250px;
   width: auto;
 }
 .ultimaPaginaContainer div .primerTexto {
   align-content: center;
   text-align: start;
+}
+.ultimaPaginaContainer div .primerTexto h2 {
+  font-size: 3rem;
 }
 .ultimaPaginaContainer div .segundaImagen {
   height: 300px;
@@ -378,13 +431,19 @@ div div.mapResponsive iframe {
   align-content: center;
   text-align: end;
 }
+.ultimaPaginaContainer div .segundoTexto h2 {
+  font-size: 3rem;
+}
 .ultimaPaginaContainer div .ultimaImagen {
-  height: 300px;
+  height: 280px;
   width: auto;
 }
 .ultimaPaginaContainer div .tercerTexto {
   align-content: center;
   text-align: start;
+}
+.ultimaPaginaContainer div .tercerTexto h2 {
+  font-size: 3rem;
 }
 
 .imagenesGridContainer {
@@ -606,12 +665,27 @@ div div.mapResponsive iframe {
 
 /* MEDIA QUERIES */
 @media (min-width: 577px) and (max-width: 1000px) {
+  html, body {
+    overflow-x: hidden;
+  }
   .img4, .img5, .img9, .img10 {
     display: none;
   }
   .gridContainer {
     grid-template-rows: minmax(15vh, 40vh) minmax(5vh, 13vh) minmax(5vh, 15vh) minmax(15vh, 15vh);
     padding-bottom: 25px;
+  }
+  .ultimaPaginaContainer div {
+    width: 100%;
+    justify-content: center;
+  }
+  .ultimaPaginaContainer div .primeraImagen, .ultimaPaginaContainer div .segundaImagen, .ultimaPaginaContainer div .ultimaImagen {
+    width: 70%;
+    height: auto;
+    margin: 0px;
+  }
+  .ultimaPaginaContainer div .primerTexto, .ultimaPaginaContainer div .segundoTexto, .ultimaPaginaContainer div .tercerTexto {
+    width: 85%;
   }
   footer {
     align-items: center !important;
@@ -630,15 +704,19 @@ div div.mapResponsive iframe {
   html h2 {
     font-size: 3vw;
   }
+  header nav div a span {
+    display: none;
+  }
   .banner {
     height: 30vh;
   }
   .banner2 {
-    margin-right: 0px !important;
+    margin: auto 0;
     margin-bottom: 15px !important;
     height: 30vh;
     margin-top: 0px !important;
     padding-top: 0px;
+    overflow-x: hidden;
   }
   .marcaRegistrada {
     display: none;
@@ -657,14 +735,27 @@ div div.mapResponsive iframe {
     margin-bottom: 5px;
     font-size: 2vh !important;
   }
+  .ultimaPaginaContainer {
+    padding-bottom: 15px;
+  }
   .ultimaPaginaContainer div {
     text-align: center;
     align-items: center;
     justify-content: center;
     margin-top: 5px;
   }
-  .ultimaPaginaContainer {
-    padding-bottom: 15px;
+  .ultimaPaginaContainer div .primeraImagen {
+    width: 95%;
+    height: auto;
+  }
+  .ultimaPaginaContainer div .segundaImagen {
+    order: 1;
+    width: 95%;
+    height: auto;
+  }
+  .ultimaPaginaContainer div .ultimaImagen {
+    height: auto;
+    width: 95%;
   }
   .segundoTexto {
     order: 2;
@@ -678,9 +769,6 @@ div div.mapResponsive iframe {
   .tercerTexto {
     align-content: center;
     text-align: center !important;
-  }
-  .segundaImagen {
-    order: 1;
   }
   .video-back {
     height: 30vh;

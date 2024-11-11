@@ -1,6 +1,18 @@
 /* MEDIA QUERIES */
 
 @media (min-width:577px) and (max-width:1000px) {
+    html, body {
+        overflow-x: hidden;
+    }
+html{
+    // h1{
+    //     font-size: 9vw;
+    // }
+    
+    // h2{
+    //     font-size: 3.5vw;
+    // }
+}
     .img4, .img5, .img9, .img10{
         display: none;
     }
@@ -11,6 +23,23 @@
         minmax(5vh, 15vh)
         minmax(15vh, 15vh);
         padding-bottom: 25px;
+    }
+    .ultimaPaginaContainer{
+
+        
+        div{
+            width: 100%;
+            justify-content: center;
+            .primeraImagen, .segundaImagen, .ultimaImagen{
+                width: 70%;
+                height: auto;
+                margin: 0px;
+            }
+            .primerTexto, .segundoTexto, .tercerTexto{
+                width: 85%;
+            }
+
+        }
     }
     footer{
         align-items: center !important;
@@ -36,16 +65,28 @@ html{
     font-size: 3vw;
     }
 }
+header{
+    nav{
+        div{
+            a{
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+}
     .banner{
         height: 30vh;
     }
     
     .banner2{
-        margin-right: 0px !important;
+        margin: auto 0;
         margin-bottom: 15px !important;
         height: 30vh;
         margin-top: 0px !important;
         padding-top: 0px;
+        overflow-x: hidden;
     }
     
     
@@ -74,16 +115,35 @@ html{
         font-size: 2vh !important;
     }
     
-    .ultimaPaginaContainer div{
+    .ultimaPaginaContainer{ 
+        padding-bottom: 15px;
+    
+        div{
         text-align: center;
         align-items: center;
         justify-content: center;
         margin-top: 5px;
+
+        .primeraImagen{
+            width: 95%;
+            height: auto;
+        }
+
+        .segundaImagen{
+            order: 1;
+            width: 95%;
+            height: auto;
+        
+        }
+
+        .ultimaImagen{
+            height: auto;
+            width: 95%;
+        }
+    }
     }
     
-    .ultimaPaginaContainer{
-        padding-bottom: 15px;
-    }
+    
     .segundoTexto{
         order:2;
         align-content: center;
@@ -98,10 +158,7 @@ html{
         align-content: center;
         text-align: center !important;
     }
-    .segundaImagen{
-        order: 1;
     
-    }
     
     .video-back{
         height: 30vh;
