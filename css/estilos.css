@@ -167,8 +167,8 @@ header .sub-header {
   transform: translateY(-100%);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  background-color: #efc0f1;
-  z-index: 999;
+  z-index: -1;
+  border-radius: 3px;
 }
 header .sub-header .nav-link {
   color: white;
@@ -176,7 +176,8 @@ header .sub-header .nav-link {
   font-weight: bold;
 }
 header .sub-header .sub-color {
-  background-color: rgba(197, 44, 205, 0.1);
+  background-color: #715ec3;
+  border-radius: 3px;
 }
 
 header:hover .sub-header {
@@ -357,8 +358,9 @@ div div.mapResponsive iframe {
 .ultimaPaginaContainer {
   width: 100%;
   padding-bottom: 80px;
-  margin-right: 0px !important;
-  padding-right: 0px !important;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
   justify-content: center;
 }
 .ultimaPaginaContainer .banner2 {
@@ -369,8 +371,9 @@ div div.mapResponsive iframe {
   align-items: center;
   text-align: center;
   margin-bottom: 80px !important;
-  margin-right: 0px !important;
+  margin: 0 auto;
   margin-top: 0px;
+  overflow-x: hidden;
 }
 .ultimaPaginaContainer .banner2 h1 {
   color: white;
@@ -403,7 +406,7 @@ div div.mapResponsive iframe {
   font-size: 3rem;
 }
 .ultimaPaginaContainer div .ultimaImagen {
-  height: 300px;
+  height: 280px;
   width: auto;
 }
 .ultimaPaginaContainer div .tercerTexto {
@@ -645,10 +648,15 @@ div div.mapResponsive iframe {
   }
   .ultimaPaginaContainer div {
     width: 100%;
+    justify-content: center;
   }
   .ultimaPaginaContainer div .primeraImagen, .ultimaPaginaContainer div .segundaImagen, .ultimaPaginaContainer div .ultimaImagen {
-    width: 99%;
+    width: 70%;
     height: auto;
+    margin: 0px;
+  }
+  .ultimaPaginaContainer div .primerTexto, .ultimaPaginaContainer div .segundoTexto, .ultimaPaginaContainer div .tercerTexto {
+    width: 85%;
   }
   footer {
     align-items: center !important;
@@ -674,11 +682,12 @@ div div.mapResponsive iframe {
     height: 30vh;
   }
   .banner2 {
-    margin-right: 0px !important;
+    margin: auto 0;
     margin-bottom: 15px !important;
     height: 30vh;
     margin-top: 0px !important;
     padding-top: 0px;
+    overflow-x: hidden;
   }
   .marcaRegistrada {
     display: none;
@@ -697,14 +706,27 @@ div div.mapResponsive iframe {
     margin-bottom: 5px;
     font-size: 2vh !important;
   }
+  .ultimaPaginaContainer {
+    padding-bottom: 15px;
+  }
   .ultimaPaginaContainer div {
     text-align: center;
     align-items: center;
     justify-content: center;
     margin-top: 5px;
   }
-  .ultimaPaginaContainer {
-    padding-bottom: 15px;
+  .ultimaPaginaContainer div .primeraImagen {
+    width: 95%;
+    height: auto;
+  }
+  .ultimaPaginaContainer div .segundaImagen {
+    order: 1;
+    width: 95%;
+    height: auto;
+  }
+  .ultimaPaginaContainer div .ultimaImagen {
+    height: auto;
+    width: 95%;
   }
   .segundoTexto {
     order: 2;
@@ -718,9 +740,6 @@ div div.mapResponsive iframe {
   .tercerTexto {
     align-content: center;
     text-align: center !important;
-  }
-  .segundaImagen {
-    order: 1;
   }
   .video-back {
     height: 30vh;

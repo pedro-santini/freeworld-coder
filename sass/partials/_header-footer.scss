@@ -72,8 +72,8 @@ header{
         transform: translateY(-100%);
         opacity: 0;
         transition: transform 0.3s ease, opacity 0.3s ease;
-        background-color: rgba($color: #efc0f1, $alpha: 1);
-        z-index: 999;
+        z-index: -1;
+        border-radius: 3px;
 
         .nav-link{
         @extend .texto-nav-link;
@@ -83,7 +83,8 @@ header{
         }
          // Muestra y despliega el sub-header cuando el usuario pasa cerca del header
         .sub-color{
-            background-color: rgba($color: #c52ccd, $alpha: 0.1);
+            background-color: #715ec3;
+            border-radius: 3px;
         }
         
     }
