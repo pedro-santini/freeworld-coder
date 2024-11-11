@@ -56,9 +56,49 @@ html p {
   border: 1px solid #ffffff;
 }
 
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.btn-submit {
+  background-color: rgba(212, 132, 255, 0.5019607843);
+  color: #ffffff;
+  border: solid #604CC3;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
+  height: 81%;
+  width: 3rem;
+}
+.btn-submit:hover {
+  background-color: rgba(255, 102, 0, 0.5);
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+}
+.btn-submit .icono-boton {
+  transition: transform 0.5s;
+}
+.btn-submit:hover .icono-boton {
+  animation: rotar 1s linear infinite;
+}
+
+.icono-boton {
+  width: 3rem;
+  height: 3rem;
+}
+
 .subtituloImg {
   color: white;
-  font-size: 3em;
   text-shadow: 0 0 30px #FF6600;
 }
 
@@ -81,7 +121,7 @@ html p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* 100% del contenedor */
+  height: 6rem; /* 100% del contenedor */
   width: 100%;
   padding: 20px;
   border-radius: 10px;

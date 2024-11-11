@@ -63,10 +63,53 @@ html{
 }
 
 //IMG, VIDEOS y MUSICA
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-submit {
+    background-color: #d484ff80;       // Color de fondo
+    color: #ffffff;                  // Color del texto            
+    border: solid $violeta;                    // Quita el borde por defecto
+    border-radius: 50%;              // Hace el botón circular
+    padding: 0.5rem;          // Espaciado interno
+    transition: background-color 0.3s ease;  // Suaviza la transición al hacer hover
+    cursor: pointer;                 // Cambia el cursor al pasar por encima
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);  // Sombra sutil
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+    height: 81%;
+    width: 3rem;
+
+    &:hover {
+        background-color: rgba($color: $naranja, $alpha: 0.5);       // Color de fondo al hacer hover
+        transform: scale(1.1);
+        transition-duration:0.2s
+    }
+     // Aplica la animación solo a la imagen
+     .icono-boton {
+        transition: transform 0.5s;
+    }
+
+    &:hover .icono-boton {
+        animation: rotar 1s linear infinite;  // Rota continuamente en hover
+    }
+}
+
+.icono-boton {
+    width: 3rem;                         // Tamaño de la imagen
+    height: 3rem;
+}
 
 .subtituloImg{
     color: white;
-    font-size: 3em;
     text-shadow:0 0 30px $naranja;
 }
 
@@ -88,7 +131,7 @@ html{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%; /* 100% del contenedor */
+        height: 6rem; /* 100% del contenedor */
         width: 100%;
         padding: 20px;
         border-radius: 10px;
