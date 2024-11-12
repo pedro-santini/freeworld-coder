@@ -17,10 +17,8 @@
     h1{
         color: white;
         text-shadow:0 0 30px $naranja;
-        &:hover{
-            transform: scale(1.2);
-            transition-duration: 1s;
-        }
+        transform: scale(1); // Estado inicial
+        animation: scaleIn 1s ease 0.5s forwards; // Agrega la animación al cargar
     }
 }
 

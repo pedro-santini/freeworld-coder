@@ -70,6 +70,14 @@ html p {
   color: white;
 }
 
+@keyframes scaleIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
 .galeria, .imagenesGridContainer .galeria2, .imagenesGridContainer .galeria1 {
   display: flex; /* Cambiar a flex */
   justify-content: center; /* Espacio entre las imágenes */
@@ -520,10 +528,8 @@ div div.mapResponsive iframe {
 .imagenesGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
   text-shadow: 0 0 30px #FF6600;
-}
-.imagenesGridContainer .bannerPaginas .tituloBanner h1:hover {
-  transform: scale(1.2);
-  transition-duration: 1s;
+  transform: scale(1);
+  animation: scaleIn 0.6s ease 0s forwards;
 }
 .imagenesGridContainer .bannerPaginas .tituloBanner h2 {
   color: white;
@@ -628,10 +634,8 @@ div div.mapResponsive iframe {
 .videoGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
   text-shadow: 0 0 30px #FF6600;
-}
-.videoGridContainer .bannerPaginas .tituloBanner h1:hover {
-  transform: scale(1.2);
-  transition-duration: 1s;
+  transform: scale(1);
+  animation: scaleIn 0.6s ease 0s forwards;
 }
 .videoGridContainer .bannerPaginas .tituloBanner h2 {
   color: white;
@@ -693,10 +697,8 @@ div div.mapResponsive iframe {
 .musicaGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
   text-shadow: 0 0 30px #FF6600;
-}
-.musicaGridContainer .bannerPaginas .tituloBanner h1:hover {
-  transform: scale(1.2);
-  transition-duration: 1s;
+  transform: scale(1);
+  animation: scaleIn 0.6s ease 0s forwards;
 }
 .musicaGridContainer .bannerPaginas .tituloBanner h2 {
   color: white;
