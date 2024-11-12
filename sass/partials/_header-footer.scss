@@ -61,6 +61,19 @@ header{
             }
         }
     }
+
+
+// Define la animación
+@keyframes slideAbajo {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
     .sub-header {
         width: 100%;
         align-items: center;
@@ -71,9 +84,10 @@ header{
         background-color: #f8f9fa;
         transform: translateY(-100%);
         opacity: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
         z-index: -1;
         border-radius: 3px;
+        animation: slideAbajo 0.6s ease forwards; // Aplica la animación al cargar
+
 
         .nav-link{
         @extend .texto-nav-link;
@@ -90,12 +104,7 @@ header{
     }
     
 }
-header:hover .sub-header {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);  // Despliegue hacia abajo
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
+
 
 footer{
     display: flex;

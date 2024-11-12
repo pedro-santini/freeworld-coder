@@ -41,6 +41,14 @@ html p {
   color: white;
 }
 
+@keyframes scaleIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
 .galeria, .imagenesGridContainer .galeria2, .imagenesGridContainer .galeria1 {
   display: flex; /* Cambiar a flex */
   justify-content: center; /* Espacio entre las imágenes */
@@ -196,6 +204,16 @@ header nav div .logo {
 header nav div .logo:hover {
   color: #FF6600;
 }
+@keyframes slideAbajo {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 header .sub-header {
   width: 100%;
   align-items: center;
@@ -206,9 +224,9 @@ header .sub-header {
   background-color: #f8f9fa;
   transform: translateY(-100%);
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: -1;
   border-radius: 3px;
+  animation: slideAbajo 0.6s ease forwards;
 }
 header .sub-header .nav-link {
   color: white;
@@ -218,13 +236,6 @@ header .sub-header .nav-link {
 header .sub-header .sub-color {
   background-color: #715ec3;
   border-radius: 3px;
-}
-
-header:hover .sub-header {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 footer {
@@ -276,10 +287,8 @@ footer p a:hover {
 .banner h1 {
   color: white;
   text-shadow: 0 0 30px #FF6600;
-}
-.banner h1:hover {
-  transform: scale(1.2);
-  transition-duration: 1s;
+  transform: scale(1);
+  animation: scaleIn 1s ease 0.5s forwards;
 }
 
 .texto-home {
@@ -491,10 +500,8 @@ div div.mapResponsive iframe {
 .imagenesGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
   text-shadow: 0 0 30px #FF6600;
-}
-.imagenesGridContainer .bannerPaginas .tituloBanner h1:hover {
-  transform: scale(1.2);
-  transition-duration: 1s;
+  transform: scale(1);
+  animation: scaleIn 0.6s ease 0s forwards;
 }
 .imagenesGridContainer .bannerPaginas .tituloBanner h2 {
   color: white;
@@ -599,10 +606,8 @@ div div.mapResponsive iframe {
 .videoGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
   text-shadow: 0 0 30px #FF6600;
-}
-.videoGridContainer .bannerPaginas .tituloBanner h1:hover {
-  transform: scale(1.2);
-  transition-duration: 1s;
+  transform: scale(1);
+  animation: scaleIn 0.6s ease 0s forwards;
 }
 .videoGridContainer .bannerPaginas .tituloBanner h2 {
   color: white;
@@ -664,10 +669,8 @@ div div.mapResponsive iframe {
 .musicaGridContainer .bannerPaginas .tituloBanner h1 {
   color: white;
   text-shadow: 0 0 30px #FF6600;
-}
-.musicaGridContainer .bannerPaginas .tituloBanner h1:hover {
-  transform: scale(1.2);
-  transition-duration: 1s;
+  transform: scale(1);
+  animation: scaleIn 0.6s ease 0s forwards;
 }
 .musicaGridContainer .bannerPaginas .tituloBanner h2 {
   color: white;

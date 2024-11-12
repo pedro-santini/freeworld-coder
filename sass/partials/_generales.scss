@@ -45,6 +45,15 @@ html{
     color: white;
 }
 
+//TODAS LAS PAGS
+@keyframes scaleIn {
+    from {
+        transform: scale(1); // Escala inicial
+    }
+    to {
+        transform: scale(1.2); // Escala deseada
+    }
+}
 
 //IMAGENES
 
@@ -94,7 +103,7 @@ html{
         transition-duration:0.2s
     }
      // Aplica la animación solo a la imagen
-     .icono-boton {
+    .icono-boton {
         transition: transform 0.5s;
     }
 
@@ -204,11 +213,9 @@ html{
             h1 {
                 color: white;
                 text-shadow: 0 0 30px $naranja;
+                transform: scale(1); // Estado inicial
+                animation: scaleIn 0.6s ease 0s forwards; // Agrega la animación al cargar
 
-                &:hover {
-                    transform: scale(1.2);
-                    transition-duration: 1s;
-                }
             }
 
             h2 {
