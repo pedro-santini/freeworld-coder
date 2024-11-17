@@ -86,7 +86,7 @@ html{
     color: #ffffff;                  // Color del texto            
     border: solid $violeta;                    // Quita el borde por defecto
     border-radius: 50%;              // Hace el botón circular
-    padding: 0.5rem;          // Espaciado interno
+    padding:3rem;          // Espaciado interno
     transition: background-color 0.3s ease;  // Suaviza la transición al hacer hover
     cursor: pointer;                 // Cambia el cursor al pasar por encima
     box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);  // Sombra sutil
@@ -94,8 +94,8 @@ html{
     align-items: center;
     justify-content: center;
     margin-left: 3px;
-    height: 81%;
-    width: 3rem;
+    height: auto;
+    width: 6%;
 
     &:hover {
         background-color: rgba($color: $naranja, $alpha: 0.5);       // Color de fondo al hacer hover
@@ -113,8 +113,8 @@ html{
 }
 
 .icono-boton {
-    width: 6rem;  // Tamaño de la imagen
-    height: 6rem;
+    width: 100%;  // Tamaño de la imagen
+    height: 100%;
 }
 
 .subtituloImg{
@@ -140,7 +140,7 @@ html{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 6rem; /* 100% del contenedor */
+        height: 6rem; 
         width: 100%;
         padding: 20px;
         border-radius: 10px;
