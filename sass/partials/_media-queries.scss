@@ -13,7 +13,11 @@ html{
     //     font-size: 3.5vw;
     // }
 }
-
+.subtitulo{
+    h2{
+        font-size: 2.5rem;
+    }
+}
 .texto-home{
     h2{
         font-size: 2.5em;
@@ -178,7 +182,10 @@ header{
     }
     
     .subtitulo{
-        padding-top: 30px !important;
+        margin-bottom: 10px;
+        h2{
+            font-size: 2.5rem;
+        }
     }
     
     footer{

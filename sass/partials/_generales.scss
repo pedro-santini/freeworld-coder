@@ -37,9 +37,6 @@ html{
 
 //MODAL BOOTSTRAP
 
-.parrafoEjemplo{
-    color: $violeta !important;
-}
 .colorBoton{
     background-color: $violeta;
     color: white;
@@ -123,10 +120,15 @@ html{
 }
 
 .subtitulo{
-    padding-top: 100px;
-    padding-bottom: 0px;
-    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin:50px;
+    padding:0px;
+    .anchoTexto{
+        width: 80%;
+    }
 }
 
 .formContainer{

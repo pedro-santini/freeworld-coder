@@ -166,39 +166,45 @@
 .slider-container {
     text-align: center;
     padding: 50px 20px;
+    // background-color: rgba($color: #220039, $alpha: 1.0);
+    background: linear-gradient(to top right, #220039 55%, $naranja);
 
     h2 {
-        color: $violeta;
+        color: white;
+        text-shadow: 0 0 30px $naranja;
         margin-bottom: 30px;
         font-size: 2.5rem;
     }
+    .carousel-inner{
+        box-shadow: 10px 10px 20px rgba(255, 111, 0, 0.3), -5px -5px 20px rgba(255, 111, 0, 0.3) ; /* Sombra */
+        border-radius: 10px;
+        .carousel-item {
+            position: relative;
 
-    .carousel-item {
-        position: relative;
-
-        img {
-            object-fit: cover;
-            height: 400px;
-            border-radius: 10px;
-        }
-
-        .carousel-caption {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-
-            h5 {
-                font-size: 1.8em;
-                margin-bottom: 10px;
+            img {
+                object-fit: cover;
+                height: 400px;
+                border-radius: 10px;
             }
 
-            p {
-                font-size: 1.1em;
+            .carousel-caption {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.6);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+
+                h5 {
+                    font-size: 1.8em;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 1.1em;
+                }
             }
         }
     }
