@@ -13,6 +13,12 @@ html{
     //     font-size: 3.5vw;
     // }
 }
+
+.texto-home{
+    h2{
+        font-size: 2.5em;
+    }
+}
     .img4, .img5, .img9, .img10{
         display: none;
     }
@@ -108,10 +114,11 @@ header{
     }
     
     .texto-home{
-        margin-top: 25px;
+        h2{
+            font-size: 2.5em;
+        }
     }
     .texto-home p{
-        margin-bottom: 5px;
         font-size: 2vh !important;
     }
     // .audioDisplay{

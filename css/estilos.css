@@ -275,18 +275,19 @@ footer p a:hover {
 /* Main Index */
 .banner {
   width: 100%;
-  height: 50vh;
+  height: 60vh; /* Aumentar altura para hacer el banner más grande */
   background-image: url(../media/universo-retro.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  align-items: center;
-  align-content: center;
+  display: flex; /* Flexbox para centrar el contenido */
   justify-content: center;
-  margin: 0px;
-  padding-right: 20px;
-  padding-left: 20px;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  background-attachment: fixed; /* Fondo fijo que se mueve más lento que el contenido */
+  margin-bottom: 30px;
 }
 .banner h1 {
   color: white;
@@ -294,16 +295,26 @@ footer p a:hover {
   transform: scale(1);
   animation: scaleIn 1s ease 0.5s forwards;
 }
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 .texto-home {
-  margin-top: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
-.texto-home h2 {
+.texto-home .listoParaComenzar {
+  margin: 50px;
+}
+.texto-home .listoParaComenzar h2 {
   color: #000000;
-  font-size: 3em;
 }
-.texto-home p {
+.texto-home .listoParaComenzar p {
   color: #000000;
   font-size: 1.5em;
   margin-bottom: 50px;
@@ -327,8 +338,12 @@ footer p a:hover {
   align-content: center;
   padding: 0px;
   overflow: hidden;
+  transition: all 0.3s ease; /* Suaviza la transición */
 }
 .texto-home ul.centro-index li.imagenConTexto:hover {
+  color: #180161;
+  background-color: white;
+  transform: scale(1.1); /* Efecto de escala al hacer hover */
   border: 4px solid #FF6600;
 }
 .texto-home ul.centro-index li.imagenConTexto:hover img {
@@ -356,10 +371,107 @@ footer p a:hover {
   border-radius: 15px;
   padding: 10px;
   text-decoration: none; /* Elimina el subrayado del enlace */
+  transition: all 0.3s ease; /* Suaviza la transición */
 }
 .texto-home ul.centro-index li.imagenConTexto .overlay-text:hover {
   color: #180161;
   background-color: white;
+}
+
+.cta-container {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+}
+.cta-container .btn-cta {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #FF6600;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.cta-container .btn-cta:hover {
+  background-color: #604CC3;
+  transform: scale(1.1);
+}
+
+.testimonios {
+  text-align: center;
+  padding: 50px 0;
+}
+.testimonios h2 {
+  font-size: 2.5em;
+  color: #604CC3;
+}
+.testimonios .testimonial {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-style: italic;
+}
+.testimonios .testimonial p {
+  font-size: 1.1em;
+  color: #555;
+}
+.testimonios .testimonial span {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Slider */
+.slider-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+.slider-container h2 {
+  color: #604CC3;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+.slider-container .carousel-item {
+  position: relative;
+}
+.slider-container .carousel-item img {
+  object-fit: cover;
+  height: 400px;
+  border-radius: 10px;
+}
+.slider-container .carousel-item .carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.slider-container .carousel-item .carousel-caption h5 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+.slider-container .carousel-item .carousel-caption p {
+  font-size: 1.1em;
+}
+.slider-container .carousel-control-prev-icon, .slider-container .carousel-control-next-icon {
+  background-color: #FF6600;
+  border-radius: 10px;
+  height: 30px;
+}
+.slider-container .carousel-indicators button {
+  background-color: #FF6600;
+}
+.slider-container .carousel-control-prev-icon:hover, .slider-container .carousel-control-next-icon:hover {
+  background-color: #604CC3;
 }
 
 main {
@@ -820,6 +932,9 @@ div div.mapResponsive iframe {
   html, body {
     overflow-x: hidden;
   }
+  .texto-home h2 {
+    font-size: 2.5em;
+  }
   .img4, .img5, .img9, .img10 {
     display: none;
   }
@@ -880,11 +995,10 @@ div div.mapResponsive iframe {
     grid-template-rows: minmax(15vh, 30vh) minmax(5vh, 13vh) minmax(5vh, 15vh) minmax(15vh, 15vh);
     padding-bottom: 25px;
   }
-  .texto-home {
-    margin-top: 25px;
+  .texto-home h2 {
+    font-size: 2.5em;
   }
   .texto-home p {
-    margin-bottom: 5px;
     font-size: 2vh !important;
   }
   .ultimaPaginaContainer {
