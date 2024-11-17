@@ -113,8 +113,8 @@ html{
 }
 
 .icono-boton {
-    width: 3rem;                         // Tamaño de la imagen
-    height: 3rem;
+    width: 6rem;  // Tamaño de la imagen
+    height: 6rem;
 }
 
 .subtituloImg{
@@ -157,6 +157,10 @@ html{
             &:focus{
                 border-color: $naranja;
             }
+        }
+        input::placeholder {
+            color: gray; /* Cambia el color */
+            font-style: italic; /* Opcional: estilo de la fuente */
         }
     }
 }
