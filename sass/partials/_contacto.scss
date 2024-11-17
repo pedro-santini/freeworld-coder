@@ -1,29 +1,69 @@
-
-p.contacto{
-    font-size: 2vh;
-}
-
-div{
-    form{
-        textarea.alturaRecuadro{
-            height: 30vh;
+.seccionContacto{
+    background: linear-gradient(to top right, #220039CC 55%, $naranja);
+    section{
+        h2{
+            color: white;
+            text-shadow: 0 0 30px $violeta;
+            margin-bottom: 30px;
+        }
+        .contacto{
+            font-size: 2vh;
+            color: white;
+        }
+        div{
+            form{
+                color: white;
+                input, textarea{
+                    &:focus {
+                        outline: none;
+                        border-radius: $naranja;
+                        box-shadow: 0 0 5px $naranja; /* Agrega un efecto de luz */
+                    }
+                    &:hover {
+                        color: $naranja;
+                        transform: scale(1.1);
+                        // Aplica el desenfoque al resto de la página
+                        ~ * { // Afecta a los hermanos del formulario
+                            filter: blur(0.5px); 
+                            pointer-events: none; // Desactiva la interacción
+                        }
+                    }
+                }
+                .botonEnviar{
+                    background: radial-gradient(circle,rgb(48, 48, 48) 10%,rgba(228, 124, 72, 0.2) 100%);
+                    font-weight: bold;
+                    color: white;
+                    box-shadow:0 0 5px white;
+                    border:none;
+                    border-radius: 5px;
+                    height: 2rem;
+                }
+                textarea.alturaRecuadro{
+                    height: 30vh;
+                    border-radius: 10px;
+                    padding: 10px;
+                }
+            }
+        }
+        div{
+            div.mapResponsive{
+            height: 40vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center; /* Centra el mapa horizontalmente */
+            align-items: center; /* Centra el mapa verticalmente si es necesario */
+                iframe{
+                    position: absolute;
+                    width: 80vw; /* Hace que el iframe ocupe todo el ancho de la ventana */
+                    height: 100%;
+                    border: 0;
+                    border-radius: 10px;
+                }
+            }
         }
     }
 }
 
-div{
-    div.mapResponsive{
-    height: 40vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center; /* Centra el mapa horizontalmente */
-    align-items: center; /* Centra el mapa verticalmente si es necesario */
-        iframe{
-            position: absolute;
-            width: 80vw; /* Hace que el iframe ocupe todo el ancho de la ventana */
-            height: 100%;
-            border: 0;
-        }
-    }
-}
+
+
