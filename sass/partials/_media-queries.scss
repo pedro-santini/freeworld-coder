@@ -1,42 +1,42 @@
 /* MEDIA QUERIES */
 
+/* ----------------------------------------------------TABLET------------------------------------------------------*/
 @media (min-width:577px) and (max-width:1000px) {
-    html, body {
-        overflow-x: hidden;
+
+/* ------------------------------TODAS LAS PAGINAS--------------------------------*/
+
+    .subtitulo{
+        h2{
+            font-size: 2.5rem;
+        }
     }
-html{
-    // h1{
-    //     font-size: 9vw;
-    // }
-    
-    // h2{
-    //     font-size: 3.5vw;
-    // }
-}
-.subtitulo{
-    h2{
-        font-size: 2.5rem;
+    footer{
+        align-items: center !important;
+        p{
+            font-size: 1.5vh !important;
+            width: 50%;
+            padding: 0px;
+            justify-content: center;
+            a{
+                padding: 5px;
+            }
+        }
     }
-}
-.texto-home{
-    h2{
-        font-size: 2.5em;
+/* ------------------------------pag INDEX--------------------------------*/
+
+    .texto-home{
+        h2{
+            font-size: 2.5em;
+        }
     }
-}
+/* ------------------------------pag IMAGENES--------------------------------*/
+
     .img4, .img5, .img9, .img10{
         display: none;
     }
-    .gridContainer{
-        grid-template-rows: 
-        minmax(15vh, 40vh) 
-        minmax(5vh, 13vh)
-        minmax(5vh, 15vh)
-        minmax(15vh, 15vh);
-        padding-bottom: 25px;
-    }
-    .ultimaPaginaContainer{
 
-        
+/* ------------------------------pag SOBRE NOSOTROS--------------------------------*/
+    .ultimaPaginaContainer{
         div{
             width: 100%;
             justify-content: center;
@@ -51,159 +51,110 @@ html{
 
         }
     }
-    footer{
-        align-items: center !important;
-    }
-    footer p{
-        font-size: 1.5vh !important;
-        width: 50%;
-        padding: 0px;
-        justify-content: center;
-    }
-    footer p a{
-        padding: 5px;
-    }
 }
 
+/* ----------------------------------------------------MOBILE------------------------------------------------------*/
 @media (max-width: 576px){
-html{
-//     h1{
-//         font-size: 8vw;
-//     }
-    
-    h2{
-    font-size: 3vw;
+/* ------------------------------TODAS LAS PAGINAS--------------------------------*/
+    html{
+        h2{
+        font-size: 3vw;
+        }
     }
-}
-header{
-    nav{
-        div{
-            a{
-                span{
-                    display: none;
+    header{
+        nav{
+            div{
+                a{
+                    span{
+                        display: none;
+                    }
                 }
             }
         }
     }
-}
-    .banner{
-        height: 30vh;
-    }
-    
-    .banner2{
-        margin: auto 0;
-        margin-bottom: 15px !important;
-        height: 30vh;
-        margin-top: 0px !important;
-        padding-top: 0px;
-        overflow-x: hidden;
-    }
-    
-    
-    .marcaRegistrada{
-        display: none;
-    }
-    
-    .img4, .img5, .img9, .img10{
-        display: none;
-    }
-    
-    .gridContainer{
-        grid-template-rows: 
-        minmax(15vh, 30vh) 
-        minmax(5vh, 13vh)
-        minmax(5vh, 15vh)
-        minmax(15vh, 15vh);
-        padding-bottom: 25px;
-    }
-    
-    .texto-home{
-        h2{
-            font-size: 2.5em;
-        }
-    }
-    .texto-home p{
-        font-size: 2vh !important;
-    }
-    // .audioDisplay{
-    //     .waveform{
-    //         .bar{
-    //             height: 8vw !important;
-    //             }
-    //     }
-    // }
-    .ultimaPaginaContainer{ 
-        padding-bottom: 15px;
-    
-        div{
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-top: 5px;
-
-        .primeraImagen{
-            width: 95%;
-            height: auto;
-        }
-
-        .segundaImagen{
-            order: 1;
-            width: 95%;
-            height: auto;
-        
-        }
-
-        .ultimaImagen{
-            height: auto;
-            width: 95%;
-        }
-    }
-    }
-    
-    
-    .segundoTexto{
-        order:2;
-        align-content: center;
-        text-align: center !important;
-    }
-
-    .primerTexto{
-        align-content: center;
-        text-align: center !important;
-    }
-    .tercerTexto{
-        align-content: center;
-        text-align: center !important;
-    }
-    
-    
-    .video-back{
-        height: 30vh;
-    }
-    
     .subtitulo{
         margin-bottom: 10px;
         h2{
             font-size: 2.5rem;
         }
     }
-    
+
+
     footer{
         align-items: center !important;
+        p{
+            font-size: 1.5vh !important;
+            width: 50%;
+            padding: 0px;
+            justify-content: center;
+            a{
+                padding: 5px;
+            }
+            .marcaRegistrada{
+                display: none;
+            }
+        }
+    }
+/* ------------------------------pag INDEX--------------------------------*/
+    .banner{
+            height: 30vh;
+    }
+    .texto-home{
+        h2{
+            font-size: 2em;
+        }
+    }
+/* ------------------------------pag IMAGENES--------------------------------*/
+    .img4, .img5, .img9, .img10{
+        display: none;
     }
     
-    footer p{
-        font-size: 1.5vh !important;
-        width: 50%;
-        padding: 0px;
-        justify-content: center;
+/* ------------------------------SOBRE NOSOTROS--------------------------------*/
+    .ultimaPaginaContainer{ 
+        padding-bottom: 15px;
+        .banner2{
+            margin: auto 0;
+            margin-bottom: 15px !important;
+            height: 30vh;
+            margin-top: 0px !important;
+            padding-top: 0px;
+            overflow-x: hidden;
+        }
+        div{
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5px;
+            .primerTexto{
+                align-content: center;
+                text-align: center !important;
+            }
+            .primeraImagen{
+                width: 95%;
+                height: auto;
+            }
+            .segundoTexto{
+                order:2;
+                align-content: center;
+                text-align: center !important;
+            }
+            .segundaImagen{
+                order: 1;
+                width: 95%;
+                height: auto;
+            
+            }
+            .tercerTexto{
+                align-content: center;
+                text-align: center !important;
+            }
+            .ultimaImagen{
+                height: auto;
+                width: 95%;
+            }
+        }
     }
-    
-    footer p a{
-        padding: 5px;
-    }
-    
-    
+/* ------------------------------pag CONTACTO--------------------------------*/
     .contacto{
         font-size: 0.8clem !important;
     }
@@ -213,4 +164,3 @@ header{
     
     }
 }
-    

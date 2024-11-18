@@ -3,46 +3,6 @@
     align-content: center;
     margin: 0px;
     @include banner("../../media/inteligenciaVideo.mp4", true); // Para la página de video
-    // .video-back{
-    //     position: relative;
-    //     height: 50vh; /* Ocupa el alto completo de la ventana */
-    //     overflow: hidden;
-    //     align-content: center;
-    //     margin-right: 0px;
-    //     margin-left: 0px;
-    //     div video{
-    //         position: absolute;
-    //         top: 50%;
-    //         left: 50%;
-    //         width: 100vw;
-    //         height: 100%;
-    //         transform: translate(-50%, -50%);
-    //         z-index: 0;
-    //         object-fit: cover;
-    //         object-position: center;
-    //     }
-    //     div.tituloVideo{
-    //         position: relative;
-    //         z-index: 1; /* Asegura que el texto esté encima */
-    //         align-content: center;
-    //         align-items: center;
-    //         text-align: center; 
-    //         margin-bottom: 15px;
-    //         border-radius: 4px;
-    //         h1{
-    //             color: white;
-    //             font-size: 7em;
-    //             text-shadow:0 0 30px $naranja;
-    //             &:hover{
-    //                 transform: scale(1.2);
-    //                 transition-duration: 1s;
-    //             }
-    //         }
-    //         h2{
-    //             @extend .subtituloImg;
-    //         }
-    //     }
-    // }
     .carrusel{
         margin-top: 30px;
         display: flex;

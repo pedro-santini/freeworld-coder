@@ -9,7 +9,6 @@
 
     audio {
         margin-bottom: 20px;
-        color: white;
          /* Cambiar el color de los controles y el fondo */
     &::-webkit-media-controls-panel {
         background-color: #333; /* Fondo oscuro */
@@ -35,12 +34,7 @@
     &::-webkit-media-controls-time-remaining-display {
         color: $gris; /* Color del tiempo de reproducción */
     }
-
-    &::-webkit-media-controls-seek-backward-button,
-    &::-webkit-media-controls-seek-forward-button {
-        background-color: #ff007a; /* Color de los botones de adelantar y retroceder */
-    }
-    }
+}
 
     .waveform {
         display: flex;

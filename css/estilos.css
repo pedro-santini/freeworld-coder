@@ -874,7 +874,6 @@ main:before {
 }
 .musicaGridContainer .audioDisplay audio {
   margin-bottom: 20px;
-  color: white;
   /* Cambiar el color de los controles y el fondo */
 }
 .musicaGridContainer .audioDisplay audio::-webkit-media-controls-panel {
@@ -895,9 +894,6 @@ main:before {
 }
 .musicaGridContainer .audioDisplay audio::-webkit-media-controls-current-time-display, .musicaGridContainer .audioDisplay audio::-webkit-media-controls-time-remaining-display {
   color: #F5F5F5; /* Color del tiempo de reproducción */
-}
-.musicaGridContainer .audioDisplay audio::-webkit-media-controls-seek-backward-button, .musicaGridContainer .audioDisplay audio::-webkit-media-controls-seek-forward-button {
-  background-color: #ff007a; /* Color de los botones de adelantar y retroceder */
 }
 .musicaGridContainer .audioDisplay .waveform {
   display: flex;
@@ -999,34 +995,11 @@ main:before {
 }
 
 /* MEDIA QUERIES */
+/* ----------------------------------------------------TABLET------------------------------------------------------*/
 @media (min-width: 577px) and (max-width: 1000px) {
-  html, body {
-    overflow-x: hidden;
-  }
+  /* ------------------------------TODAS LAS PAGINAS--------------------------------*/
   .subtitulo h2 {
     font-size: 2.5rem;
-  }
-  .texto-home h2 {
-    font-size: 2.5em;
-  }
-  .img4, .img5, .img9, .img10 {
-    display: none;
-  }
-  .gridContainer {
-    grid-template-rows: minmax(15vh, 40vh) minmax(5vh, 13vh) minmax(5vh, 15vh) minmax(15vh, 15vh);
-    padding-bottom: 25px;
-  }
-  .ultimaPaginaContainer div {
-    width: 100%;
-    justify-content: center;
-  }
-  .ultimaPaginaContainer div .primeraImagen, .ultimaPaginaContainer div .segundaImagen, .ultimaPaginaContainer div .ultimaImagen {
-    width: 70%;
-    height: auto;
-    margin: 0px;
-  }
-  .ultimaPaginaContainer div .primerTexto, .ultimaPaginaContainer div .segundoTexto, .ultimaPaginaContainer div .tercerTexto {
-    width: 85%;
   }
   footer {
     align-items: center !important;
@@ -1040,78 +1013,36 @@ main:before {
   footer p a {
     padding: 5px;
   }
+  /* ------------------------------pag INDEX--------------------------------*/
+  .texto-home h2 {
+    font-size: 2.5em;
+  }
+  /* ------------------------------pag IMAGENES--------------------------------*/
+  .img4, .img5, .img9, .img10 {
+    display: none;
+  }
+  /* ------------------------------pag SOBRE NOSOTROS--------------------------------*/
+  .ultimaPaginaContainer div {
+    width: 100%;
+    justify-content: center;
+  }
+  .ultimaPaginaContainer div .primeraImagen, .ultimaPaginaContainer div .segundaImagen, .ultimaPaginaContainer div .ultimaImagen {
+    width: 70%;
+    height: auto;
+    margin: 0px;
+  }
+  .ultimaPaginaContainer div .primerTexto, .ultimaPaginaContainer div .segundoTexto, .ultimaPaginaContainer div .tercerTexto {
+    width: 85%;
+  }
 }
+/* ----------------------------------------------------MOBILE------------------------------------------------------*/
 @media (max-width: 576px) {
+  /* ------------------------------TODAS LAS PAGINAS--------------------------------*/
   html h2 {
     font-size: 3vw;
   }
   header nav div a span {
     display: none;
-  }
-  .banner {
-    height: 30vh;
-  }
-  .banner2 {
-    margin: auto 0;
-    margin-bottom: 15px !important;
-    height: 30vh;
-    margin-top: 0px !important;
-    padding-top: 0px;
-    overflow-x: hidden;
-  }
-  .marcaRegistrada {
-    display: none;
-  }
-  .img4, .img5, .img9, .img10 {
-    display: none;
-  }
-  .gridContainer {
-    grid-template-rows: minmax(15vh, 30vh) minmax(5vh, 13vh) minmax(5vh, 15vh) minmax(15vh, 15vh);
-    padding-bottom: 25px;
-  }
-  .texto-home h2 {
-    font-size: 2.5em;
-  }
-  .texto-home p {
-    font-size: 2vh !important;
-  }
-  .ultimaPaginaContainer {
-    padding-bottom: 15px;
-  }
-  .ultimaPaginaContainer div {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5px;
-  }
-  .ultimaPaginaContainer div .primeraImagen {
-    width: 95%;
-    height: auto;
-  }
-  .ultimaPaginaContainer div .segundaImagen {
-    order: 1;
-    width: 95%;
-    height: auto;
-  }
-  .ultimaPaginaContainer div .ultimaImagen {
-    height: auto;
-    width: 95%;
-  }
-  .segundoTexto {
-    order: 2;
-    align-content: center;
-    text-align: center !important;
-  }
-  .primerTexto {
-    align-content: center;
-    text-align: center !important;
-  }
-  .tercerTexto {
-    align-content: center;
-    text-align: center !important;
-  }
-  .video-back {
-    height: 30vh;
   }
   .subtitulo {
     margin-bottom: 10px;
@@ -1131,6 +1062,65 @@ main:before {
   footer p a {
     padding: 5px;
   }
+  footer p .marcaRegistrada {
+    display: none;
+  }
+  /* ------------------------------pag INDEX--------------------------------*/
+  .banner {
+    height: 30vh;
+  }
+  .texto-home h2 {
+    font-size: 2em;
+  }
+  /* ------------------------------pag IMAGENES--------------------------------*/
+  .img4, .img5, .img9, .img10 {
+    display: none;
+  }
+  /* ------------------------------SOBRE NOSOTROS--------------------------------*/
+  .ultimaPaginaContainer {
+    padding-bottom: 15px;
+  }
+  .ultimaPaginaContainer .banner2 {
+    margin: auto 0;
+    margin-bottom: 15px !important;
+    height: 30vh;
+    margin-top: 0px !important;
+    padding-top: 0px;
+    overflow-x: hidden;
+  }
+  .ultimaPaginaContainer div {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  .ultimaPaginaContainer div .primerTexto {
+    align-content: center;
+    text-align: center !important;
+  }
+  .ultimaPaginaContainer div .primeraImagen {
+    width: 95%;
+    height: auto;
+  }
+  .ultimaPaginaContainer div .segundoTexto {
+    order: 2;
+    align-content: center;
+    text-align: center !important;
+  }
+  .ultimaPaginaContainer div .segundaImagen {
+    order: 1;
+    width: 95%;
+    height: auto;
+  }
+  .ultimaPaginaContainer div .tercerTexto {
+    align-content: center;
+    text-align: center !important;
+  }
+  .ultimaPaginaContainer div .ultimaImagen {
+    height: auto;
+    width: 95%;
+  }
+  /* ------------------------------pag CONTACTO--------------------------------*/
   .contacto {
     font-size: 0.8clem !important;
   }
