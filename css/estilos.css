@@ -66,6 +66,7 @@ html p {
   color: white;
 }
 
+/*------------------------------------------TODAS LAS PAGS-------------------------------------------*/
 @keyframes scaleIn {
   from {
     transform: scale(1);
@@ -74,6 +75,7 @@ html p {
     transform: scale(1.2);
   }
 }
+/*------------------------------------------IMAGENES-------------------------------------------*/
 .galeria, .imagenesGridContainer .galeria2, .imagenesGridContainer .galeria1 {
   display: flex; /* Cambiar a flex */
   justify-content: center; /* Espacio entre las imágenes */
@@ -89,6 +91,7 @@ html p {
   border: 1px solid #ffffff;
 }
 
+/*------------------------------------------IMG, VIDEOS y MÚSICA-------------------------------------------*/
 @keyframes rotar {
   from {
     transform: rotate(0deg);

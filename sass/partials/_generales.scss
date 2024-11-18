@@ -71,7 +71,7 @@ html{
     color: white;
 }
 
-//TODAS LAS PAGS
+/*------------------------------------------TODAS LAS PAGS-------------------------------------------*/
 @keyframes scaleIn {
     from {
         transform: scale(1); // Escala inicial
@@ -81,7 +81,7 @@ html{
     }
 }
 
-//IMAGENES
+/*------------------------------------------IMAGENES-------------------------------------------*/
 
 .galeria{
     display: flex; /* Cambiar a flex */
@@ -97,7 +97,8 @@ html{
     border: 1px solid#ffffff;
 }
 
-//IMG, VIDEOS y MUSICA
+/*------------------------------------------IMG, VIDEOS y MÚSICA-------------------------------------------*/
+
 @keyframes rotar {
     from {
         transform: rotate(0deg);
