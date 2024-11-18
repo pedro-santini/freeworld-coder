@@ -1124,8 +1124,11 @@ main:before {
     width: 95%;
   }
   /* ------------------------------pag CONTACTO--------------------------------*/
-  .contacto {
-    font-size: 0.8clem !important;
+  .seccionContacto section h2 {
+    font-size: 3rem !important;
+  }
+  .seccionContacto section .contacto {
+    font-size: 1em !important;
   }
   .alturaRecuadro {
     width: 70% !important;

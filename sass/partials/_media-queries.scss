@@ -155,12 +155,20 @@
         }
     }
 /* ------------------------------pag CONTACTO--------------------------------*/
-    .contacto{
-        font-size: 0.8clem !important;
+    .seccionContacto{
+        section{
+            h2{
+                font-size: 3rem !important;
+            }
+            .contacto{
+                font-size: 1em !important;
+            }
+        }
     }
     .alturaRecuadro{
         width: 70% !important;
         height: 20vh !important;
     
     }
+
 }
