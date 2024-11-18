@@ -7,6 +7,35 @@
 }
 
 html {
+  font-size: 62.5%; /* rem reset, 1rem = 10px */
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 10vh;
+  text-shadow: 0 0 30px #604CC3;
+}
+
+h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 4vh;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+p {
+  font-size: 2vh;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
   font-size: 62.5%;
 }
 html h1 {
@@ -140,7 +169,7 @@ html p {
   width: 60%;
   padding: 10px;
   border: 2px solid #604CC3;
-  border-radius: 5px;
+  border-radius: 30px;
   outline: none;
 }
 .formContainer .formImg .buscadorImagenes:hover {
@@ -504,15 +533,49 @@ main:before {
   z-index: -1; /* Mantiene el pseudo-elemento detrás del contenido */
 }
 
-p.contacto {
+.seccionContacto {
+  background: linear-gradient(to top right, rgba(34, 0, 57, 0.8) 55%, #FF6600);
+}
+.seccionContacto section h2 {
+  color: white;
+  text-shadow: 0 0 30px #604CC3;
+  margin-bottom: 30px;
+}
+.seccionContacto section .contacto {
   font-size: 2vh;
+  color: white;
 }
-
-div form textarea.alturaRecuadro {
+.seccionContacto section div form {
+  color: white;
+}
+.seccionContacto section div form input:focus, .seccionContacto section div form textarea:focus {
+  outline: none;
+  border-radius: #FF6600;
+  box-shadow: 0 0 5px #FF6600; /* Agrega un efecto de luz */
+}
+.seccionContacto section div form input:hover, .seccionContacto section div form textarea:hover {
+  color: #FF6600;
+  transform: scale(1.1);
+}
+.seccionContacto section div form input:hover ~ *, .seccionContacto section div form textarea:hover ~ * {
+  filter: blur(0.5px);
+  pointer-events: none;
+}
+.seccionContacto section div form .botonEnviar {
+  background: radial-gradient(circle, rgb(48, 48, 48) 10%, rgba(228, 124, 72, 0.2) 100%);
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 0 5px white;
+  border: none;
+  border-radius: 5px;
+  height: 2rem;
+}
+.seccionContacto section div form textarea.alturaRecuadro {
   height: 30vh;
+  border-radius: 10px;
+  padding: 10px;
 }
-
-div div.mapResponsive {
+.seccionContacto section div div.mapResponsive {
   height: 40vh;
   width: 100%;
   position: relative;
@@ -520,11 +583,12 @@ div div.mapResponsive {
   justify-content: center; /* Centra el mapa horizontalmente */
   align-items: center; /* Centra el mapa verticalmente si es necesario */
 }
-div div.mapResponsive iframe {
+.seccionContacto section div div.mapResponsive iframe {
   position: absolute;
   width: 80vw; /* Hace que el iframe ocupe todo el ancho de la ventana */
   height: 100%;
   border: 0;
+  border-radius: 10px;
 }
 
 .ultimaPaginaContainer {

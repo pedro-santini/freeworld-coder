@@ -1,3 +1,103 @@
 .musicaGridContainer {
     @include banner("../media/diosa3.jpg", false); // Para la página de Música
+
+.audioDisplay{
+    width: 100%;
+    height: 40rem;
+    justify-content: center;
+    align-items: center;
+
+    audio {
+        margin-bottom: 20px;
+        color: white;
+         /* Cambiar el color de los controles y el fondo */
+    &::-webkit-media-controls-panel {
+        background-color: #333; /* Fondo oscuro */
+        border-radius: 10px; /* Bordes redondeados */
+    }
+
+    &::-webkit-media-controls-play-button {
+        background-color: $naranja; /* Color del botón de Play */
+        border-radius: 50%; /* Botón redondo */
+    }
+
+    &::-webkit-media-controls-volume-slider {
+        background-color: $naranja; /* Color de la barra de volumen */
+        border-radius: 5px; /* Botón redondo */
+    }
+
+    &::-webkit-media-controls-mute-button {
+        background-color: $naranja; /* Color del botón de mute */
+        border-radius: 50%; /* Botón redondo */
+    }
+
+    &::-webkit-media-controls-current-time-display,
+    &::-webkit-media-controls-time-remaining-display {
+        color: $gris; /* Color del tiempo de reproducción */
+    }
+
+    &::-webkit-media-controls-seek-backward-button,
+    &::-webkit-media-controls-seek-forward-button {
+        background-color: #ff007a; /* Color de los botones de adelantar y retroceder */
+    }
+    }
+
+    .waveform {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 30px;
+    /* Estilo de las barras */
+        .bar {
+            width: 8px;
+            height: 5vw;
+            background-color: $violeta;
+            animation: bounce 1s infinite ease-in-out, colorChange 3s infinite;
+            // Animación de retraso para las barras
+            &:nth-child(2) { animation-delay: 0.1s; }
+            &:nth-child(3) { animation-delay: 0.2s; }
+            &:nth-child(4) { animation-delay: 0.3s; }
+            &:nth-child(5) { animation-delay: 0.4s; }
+            &:nth-child(6) { animation-delay: 0.5s; }
+            &:nth-child(7) { animation-delay: 0.6s; }
+            &:nth-child(8) { animation-delay: 0.7s; }
+            &:nth-child(9) { animation-delay: 0.8s; }
+            &:nth-child(10) { animation-delay: 0.9s; }
+            &:nth-child(11) { animation-delay: 1.0s; }
+            &:nth-child(12) { animation-delay: 1.1s; }
+            &:nth-child(13) { animation-delay: 1.2s; }
+            &:nth-child(14) { animation-delay: 1.3s; }
+            &:nth-child(15) { animation-delay: 1.4s; }
+            &:nth-child(16) { animation-delay: 1.5s; }
+            &:nth-child(17) { animation-delay: 1.6s; }
+            &:nth-child(18) { animation-delay: 1.7s; }
+            &:nth-child(19) { animation-delay: 1.8s; }
+            &:nth-child(20) { animation-delay: 1.9s; }
+            }
+    }
+}
+  /* Animación */
+@keyframes bounce {
+    0% {
+    transform: scaleY(1);
+    }
+    30% {
+    transform: scaleY(1.5);
+    }
+    60%{
+        transform: scaleY(3.5);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+@keyframes colorChange{
+    0% { background-color: rgb(89, 35, 182); }/* violeta más oscuro  */
+    50% { background-color: violet; }/* rosita */
+    100% {background-color: $violeta; }/* violeta */
+    }
 }
